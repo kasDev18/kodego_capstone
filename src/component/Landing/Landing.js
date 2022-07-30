@@ -7,8 +7,5 @@ const Landing = () => (
   </div>
 );
 
-Landing.propTypes = {};
-
-Landing.defaultProps = {};
 
 export default Landing;
