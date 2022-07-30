@@ -32,7 +32,21 @@
     margin-left: 30px !important;
 }
 
+.LandingHeader_prof_details h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.LandingHeader_settings li a {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .LandingHeader_settings li a:hover {
     background: #006600;
     color: #fff;
+    transition: .3s;
 }

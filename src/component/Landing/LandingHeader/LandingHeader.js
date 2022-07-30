@@ -28,7 +28,7 @@ const LandingHeader = () => (
           <div className={styles.LandingHeader_profile + ' d-flex justify-content-center'}>
             <img src={profile} class="img-fluid m-3" alt="..." />
           </div>
-          <div className={styles + ' m-2'}>
+          <div className={styles.LandingHeader_prof_details + ' m-2'}>
             <div className={styles + ' d-flex justify-content-center'}>
               <h6>ID: #123456</h6>
             </div>
@@ -36,9 +36,7 @@ const LandingHeader = () => (
               <h6>USERNAME</h6>
             </div>
           </div>
-          <li><a class="dropdown-item text-center" href="#">Action</a></li>
-          <li><a class="dropdown-item text-center" href="#">Another action</a></li>
-          <li><a class="dropdown-item text-center" href="#">Something else here</a></li>
+          <li className={styles + ' px-5'}><a class="dropdown-item text-center border border-success" href="#">Logout  </a></li>
         </ul>
       </div>
     </div>
