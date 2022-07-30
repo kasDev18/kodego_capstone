@@ -8,6 +8,10 @@ const RedirectForgotPassword = () => {
   window.location = '';
 }
 
+const RedirectLanding = () => {
+  window.location = '/landing';
+}
+
 const Login = () => (
   <div className={styles.Login_body}>
     <div className={styles.Login_cont + ' d-flex align-items-center justify-content-center'}>
@@ -40,7 +44,7 @@ const Login = () => (
                 <PasswordShowHide />
               </div>
               <div className={styles.Login_submit_btn}>
-                <button type="button" class="btn btn-outline-success col-12">Success</button>
+                <button type="button" onClick={RedirectLanding} class="btn btn-outline-success col-12">Submit</button>
               </div>
               <div className={styles.Login_forgot_password + ' d-flex justify-content-center mt-2'}>
                 <h6>Forgot Password? click <a href="#" class="card-link">HERE</a></h6>
