@@ -30,6 +30,7 @@
 .LandingHeader_settings ul {
     margin-top: 10px !important;
     margin-left: 30px !important;
+    background: #006600;
 }
 
 .LandingHeader_prof_details h6 {
@@ -46,7 +47,7 @@
 }
 
 .LandingHeader_settings li a:hover {
-    background: #006600;
-    color: #fff;
+    color: #0f15f4 !important;
+    background: #f4ee0f;
     transition: .3s;
 }

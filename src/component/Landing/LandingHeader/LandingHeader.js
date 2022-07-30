@@ -20,15 +20,16 @@ const LandingHeader = () => (
     <div className={styles + ' col d-flex justify-content-end align-items-center px-5'}>
       <LanguageSelector />
       <div className={styles.LandingHeader_settings + ' dropdown'}>
+        <i class="fa-solid fa-user text-light"></i>
         <a className={styles.LandingHeader_settings_dropdown + ' btn btn-transparent border border-0 dropdown-toggle'} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          Settings
+          Username
         </a>
 
         <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuLink">
-          <div className={styles.LandingHeader_profile + ' d-flex justify-content-center'}>
-            <img src={profile} class="img-fluid m-3" alt="..." />
+          <div className={styles.LandingHeader_profile + ' d-flex justify-content-center p-2'}>
+            <img src={profile} class="img-fluid m-3 border rounded-circle" alt="..." width={"70px"} height={"70px"} />
           </div>
-          <div className={styles.LandingHeader_prof_details + ' m-2'}>
+          <div className={styles.LandingHeader_prof_details + ' text-light'}>
             <div className={styles + ' d-flex justify-content-center'}>
               <h6>ID: #123456</h6>
             </div>
@@ -36,7 +37,7 @@ const LandingHeader = () => (
               <h6>USERNAME</h6>
             </div>
           </div>
-          <li className={styles + ' px-5'}><a class="dropdown-item text-center border border-success" href="#">Logout  </a></li>
+          <li className={styles + ' px-5'}><a class="dropdown-item text-warning text-center border border-warning" href="#">Logout  </a></li>
         </ul>
       </div>
     </div>
