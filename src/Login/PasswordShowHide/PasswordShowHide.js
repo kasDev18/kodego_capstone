@@ -46,15 +46,6 @@ class PasswordShowHide extends Component {
           </div>
         </div>
       </div>
-
-      // <div>
-      //   <input
-      //     type={this.state.hidden ? 'password' : 'text'}
-      //     value={this.state.password}
-      //     onChange={this.handlePasswordChange}
-      //   />
-      //   <button onClick={this.toggleShow}>Show / Hide</button>
-      // </div>
     );
   }
 }
