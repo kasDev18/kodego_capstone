@@ -9,7 +9,7 @@ const RedirectForgotPassword = () => {
 }
 
 const RedirectLanding = () => {
-  window.location = '/landing';
+  window.location = '/fpc-qa/product-monitoring-system';
 }
 
 const Login = () => (

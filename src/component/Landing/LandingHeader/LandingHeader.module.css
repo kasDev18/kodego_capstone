@@ -1,0 +1,38 @@
+.LandingHeader {
+    height: 50px;
+    background: #006600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.LandingHeader_col_1 h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LandingHeader_profile {
+    margin-top: -23px;
+}
+
+.LandingHeader_settings_dropdown {
+    color: rgb(173, 170, 170);
+}
+
+.LandingHeader_settings_dropdown:focus {
+    color: rgb(173, 170, 170);
+}
+
+.LandingHeader_settings_dropdown:hover {
+    color: #fff
+}
+
+.LandingHeader_settings ul {
+    margin-top: 10px !important;
+    margin-left: 30px !important;
+}
+
+.LandingHeader_settings li a:hover {
+    background: #006600;
+    color: #fff;
+}

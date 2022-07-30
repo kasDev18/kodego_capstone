@@ -6,15 +6,22 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login/Login';
-import Landing from './Landing/Landing';
+import Landing from './component/Landing/Landing';
+import axios from 'axios';
+import './i18n';
+import i18next from 'i18next'
 
+const lang = localStorage.getItem('lang') || 'en';
+axios.defaults.headers.common['Accept-Language'] = lang;
 const root = ReactDOM.createRoot(document.getElementById('root'));
+i18next.changeLanguage(lang);
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/landing" element={<Landing />} />
+        <Route path="/fpc-qa/product-monitoring-system" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
