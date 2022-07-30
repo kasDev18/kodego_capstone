@@ -37,10 +37,6 @@ const Login = () => (
                   <label for="exampleFormControlInput1" class="form-label text-muted">Email</label>
                   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
                 </div>
-                <div class="mb-5">
-                  <label for="exampleFormControlInput1" class="form-label text-muted">Password</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput1" />
-                </div>
                 <PasswordShowHide />
               </div>
               <div className={styles.Login_submit_btn}>
