@@ -13,7 +13,7 @@ const LandingHeader = () => (
       <div className={styles + ' mx-2'}>
         <img src={logo} class="img-fluid border rounded-circle" alt="..." width={"40px"} height={"40px"} />
       </div>
-      <div className={styles + ' text-white mx-2'}>
+      <div className={styles + ' text-white mx-2 pt-2'}>
         <h6>{i18next.t('fpc_qa_pms')}</h6>
       </div>
     </div>
