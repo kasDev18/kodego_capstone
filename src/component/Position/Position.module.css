@@ -1,5 +1,9 @@
+.Position {
+    height: 86vh;
+}
+
 .Position_content {
-    height: 80vh;
+    height: 86vh;
     background: #d8d8d8;
 }
 

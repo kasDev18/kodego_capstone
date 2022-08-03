@@ -9,15 +9,9 @@ const Landing = () => (
   <div className={styles.Landing}>
     <LandingHeader />
     <div className={styles.content + ' d-flex p-3 px-5'}>
-      <div className={styles.Position + ' border rounded col-2 mx-1'}>
-        <Position />
-      </div>
-      <div className={styles.Position + ' border rounded col-8 '}>
-        <Position />
-      </div>
-      <div className={styles.Position + ' border rounded col-2 mx-1'}>
-        <Forms />
-      </div>
+      <Position />
+      <FormsContent />
+      <Forms />
     </div>
   </div>
 );

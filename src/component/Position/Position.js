@@ -25,12 +25,14 @@ class Position extends Component {
   render() {
     this.CreatePositionArray();
     return (
-      <div className={styles.Position_content + ' p-3'}>
-        <div className={styles + ' d-flex justify-content-center text-success p-3'}>
-          <h5 className="text-uppercase fw-bolder text-decoration-underline">Position</h5>
-        </div>
-        <div>
-          {this.position_array}
+      <div className={styles.Position + ' border rounded col-2 mx-1'}>
+        <div className={styles.Position_content + ' p-3'}>
+          <div className={styles + ' d-flex justify-content-center text-success p-3'}>
+            <h5 className="text-uppercase fw-bolder text-decoration-underline">Position</h5>
+          </div>
+          <div>
+            {this.position_array}
+          </div>
         </div>
       </div>
     )

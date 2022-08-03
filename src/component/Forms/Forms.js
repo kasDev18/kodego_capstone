@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './Forms.module.css';
 import { render } from '@testing-library/react';
 
-class Forms extends Component { 
-  constructor(props){
+class Forms extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      hidden : true,
+      hidden: true,
     };
 
     this.ChangeBackground = this.ChangeBackground.bind(this);
@@ -21,7 +21,7 @@ class Forms extends Component {
   ];
   forms_array = {};
 
-  ChangeBackground(){
+  ChangeBackground() {
     this.setState({ hidden: !this.state.hidden });
   }
 
@@ -29,9 +29,9 @@ class Forms extends Component {
     this.forms_array = this.forms.map((element) => (
       <div className={styles.Forms_Records + ' text-dark p-2'}>
         <h6 className={styles.random + ' pt-1 d-flex justify-content-end'} onClick={this.ChangeBackground} style={{
-          backgroundColor:  this.state.hidden ? 'green' :  'transparent', 
+          backgroundColor: this.state.hidden ? 'green' : 'transparent',
           color: this.state.hidden ? '#fff' : '#000'
-          }} >{element.forms}</h6>
+        }} >{element.forms}</h6>
       </div>
     ))
   }
@@ -39,12 +39,14 @@ class Forms extends Component {
   render() {
     this.CreatePositionArray();
     return (
-      <div className={styles.Forms_Records_content + ' p-3'}>
-        <div className={styles + ' d-flex justify-content-center text-success p-3'}>
-          <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
-        </div>
-        <div>
-          {this.forms_array}
+      <div className={styles.Forms_cont + ' border rounded col-2 mx-1'}>
+        <div className={styles.Forms_Records_content + ' p-3'}>
+          <div className={styles + ' d-flex justify-content-center text-success p-3'}>
+            <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
+          </div>
+          <div>
+            {this.forms_array}
+          </div>
         </div>
       </div>
     )
