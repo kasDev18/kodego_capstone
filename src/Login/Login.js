@@ -4,8 +4,8 @@ import styles from './Login.module.css';
 import logo from './images/1525506679828.jpg'
 import PasswordShowHide from './PasswordShowHide/PasswordShowHide';
 
-const RedirectForgotPassword = () => {
-  window.location = '';
+const RedirectSignup = () => {
+  window.location = '/signup';
 }
 
 const RedirectLanding = () => {
@@ -47,7 +47,7 @@ const Login = () => (
                 <button type="button" onClick={RedirectLanding} class="btn btn-outline-success col-12">Submit</button>
               </div>
               <div className={styles.Login_forgot_password + ' d-flex justify-content-center mt-2'}>
-                <h6>Forgot Password? click <a href="#" class="card-link">HERE</a></h6>
+                <h6>Forgot Password? click <a href="#" onClick={RedirectSignup} class="card-link">HERE</a></h6>
               </div>
             </div>
           </div>

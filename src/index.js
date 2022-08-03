@@ -10,6 +10,7 @@ import Landing from './component/Landing/Landing';
 import axios from 'axios';
 import './i18n';
 import i18next from 'i18next'
+import Signup from './Signup/Signup';
 
 const lang = localStorage.getItem('lang') || 'en';
 axios.defaults.headers.common['Accept-Language'] = lang;
@@ -21,6 +22,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/fpc-qa/product-monitoring-system" element={<Landing />} />
       </Routes>
     </BrowserRouter>
