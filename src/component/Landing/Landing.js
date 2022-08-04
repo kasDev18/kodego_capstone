@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Forms from '../Forms/Forms';
 import FormsContent from '../FormsContent/FormsContent';
 import Position from '../Position/Position';
 import styles from './Landing.module.css';
@@ -9,14 +8,21 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true,
+      hidden_qmr_paper: true,
+      hidden_qmr_non_paper: true,
     };
 
-    this.ChangeBackground = this.ChangeBackground.bind(this);
+    this.ChangeQMRPaperBackground = this.ChangeQMRPaperBackground.bind(this);
+    this.ChangeQMRNonPaperBackground = this.ChangeQMRNonPaperBackground.bind(this);
   }
 
-  ChangeBackground() {
-    this.setState({ hidden: !this.state.hidden });
+  ChangeQMRPaperBackground() {
+    this.setState({ hidden_qmr_paper: !this.state.hidden_qmr_paper });
+    // this.setState({ hidden_qmr_non_paper: !this.state.hidden_qmr_non_paper });
+  }
+
+  ChangeQMRNonPaperBackground() {
+    this.setState({ hidden_qmr_non_paper: !this.state.hidden_qmr_non_paper });
   }
 
   render() {
@@ -32,12 +38,23 @@ class Landing extends Component {
                 <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
               </div>
               <div className={styles.Forms_Records + ' text-dark p-2'} style={{
-                backgroundColor: this.state.hidden ? 'transparent' : 'green'
+                backgroundColor: this.state.hidden_qmr_paper ? 'transparent' : 'green'
               }}>
-                < h6 className={styles.random + ' pt-1 d-flex justify-content-end'} onClick={this.ChangeBackground} style={{
-                  color: this.state.hidden ? '#000' : '#fff'
+                < h6 className={styles.random + ' pt-1 d-flex justify-content-end'} onClick={this.ChangeQMRPaperBackground} style={{
+                  color: this.state.hidden_qmr_paper ? '#000' : '#fff'
                 }}
                 >QMR(Paper)</h6>
+              </div>
+              <div className={styles.Forms_Records + ' text-dark p-2'} style={{
+                backgroundColor: this.state.hidden_qmr_non_paper ? 'transparent' : 'green'
+              }}>
+                < h6 className={styles.random + ' pt-1 d-flex justify-content-end'} onClick={this.ChangeQMRNonPaperBackground} style={{
+                  color: this.state.hidden_qmr_non_paper ? '#000' : '#fff'
+                }}
+                >QMR(Non-Paper)</h6>
+              </div>
+              <div className={styles.Forms_Records + ' text-dark p-2'}>
+                <h6 className={styles.random + ' pt-1 d-flex justify-content-end'}>CAR</h6>
               </div>
             </div>
           </div>
