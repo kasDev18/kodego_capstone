@@ -1,0 +1,23 @@
+.Forms_cont {
+    height: 86vh;
+    background: #d8d8d8;
+}
+
+.FormsContent {
+    background: #d8d8d8;
+}
+
+.Forms_Records:hover h6 {
+    background-color: #006600;
+    color: #fff !important;
+    transition: .5s;
+}
+
+/* 
+.Forms_list {
+    height: 60px !important;
+}
+
+.Forms_list:hover {
+    background: #006600;
+} */

@@ -9,7 +9,7 @@ const RedirectSignup = () => {
 }
 
 const RedirectLanding = () => {
-  window.location = '/fpc-qa/product-monitoring-system';
+  window.location = '/product-monitoring-system';
 }
 
 const Login = () => (
