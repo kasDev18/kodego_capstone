@@ -17,7 +17,7 @@ class FormsContent extends Component {
       <div className={styles.FormsContent + '  col-8 container p-2'}>
         {this.state.display ? <QMR /> : this.state.display}
         {this.state.display ? <QMRNonPaper /> : this.state.display}
-        <CAR />
+        {this.state.display ? <CAR /> : this.state.display}
       </div >
     )
   }
