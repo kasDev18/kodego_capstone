@@ -8,23 +8,37 @@ import QMR from './component/FormsContent/QMR/QMR';
 import CAR from './component/FormsContent/CAR/CAR';
 import FormsMenu from './component/FormsMenu/FormsMenu';
 import QMRNonPaper from './component/FormsContent/QMRNonPaper/QMRNonPaper';
+import { Component } from 'react';
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-            </Routes>
-            <FormsMenu>
-                <Routes>
-                    <Route path="/qmr/paper" element={<QMR />} />
-                    <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
-                    <Route path="/car" element={<CAR />} />
-                </Routes>
-            </FormsMenu>
-        </BrowserRouter>
-    );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hidden: true,
+        }
+    }
+
+    render() {
+        return (
+            <>
+                {/* <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Login />} />
+                        <Route path="/signup" element={<Signup />} />
+                    </Routes>
+                </BrowserRouter > */}
+                <BrowserRouter className="d-none">
+                    <FormsMenu>
+                        <Routes>
+                            <Route path="/qmr/paper" element={<QMR />} />
+                            <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
+                            <Route path="/car" element={<CAR />} />
+                        </Routes>
+                    </FormsMenu>
+                </BrowserRouter>
+            </>
+        );
+    }
 }
 
 export default App;
