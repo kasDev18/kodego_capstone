@@ -20,23 +20,15 @@ class App extends Component {
 
     render() {
         return (
-            <>
-                {/* <BrowserRouter>
+            <BrowserRouter >
+                <FormsMenu>
                     <Routes>
-                        <Route path="/" element={<Login />} />
-                        <Route path="/signup" element={<Signup />} />
+                        <Route path="/qmr/paper" element={<QMR />} />
+                        <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
+                        <Route path="/car" element={<CAR />} />
                     </Routes>
-                </BrowserRouter > */}
-                <BrowserRouter >
-                    <FormsMenu>
-                        <Routes>
-                            <Route path="/qmr/paper" element={<QMR />} />
-                            <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
-                            <Route path="/car" element={<CAR />} />
-                        </Routes>
-                    </FormsMenu>
-                </BrowserRouter>
-            </>
+                </FormsMenu>
+            </BrowserRouter>
         );
     }
 }
