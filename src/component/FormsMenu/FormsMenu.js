@@ -27,8 +27,8 @@ const FormsMenu = ({ children }) => {
         .then((data) => {
           setData(!data)
         })
-    });
-  }, 5000)
+    }, 2000);
+  })
 
   const menuItem = [
     {
