@@ -27,7 +27,7 @@ class App extends Component {
                         <Route path="/signup" element={<Signup />} />
                     </Routes>
                 </BrowserRouter > */}
-                <BrowserRouter className="d-none">
+                <BrowserRouter >
                     <FormsMenu>
                         <Routes>
                             <Route path="/qmr/paper" element={<QMR />} />

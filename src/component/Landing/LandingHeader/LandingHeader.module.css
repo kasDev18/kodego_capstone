@@ -16,21 +16,17 @@
 }
 
 .LandingHeader_settings_dropdown {
-    color: rgb(173, 170, 170);
-}
-
-.LandingHeader_settings_dropdown:focus {
-    color: rgb(173, 170, 170);
+    color: rgb(173, 170, 170) !important;
 }
 
 .LandingHeader_settings_dropdown:hover {
-    color: #fff
+    color: #fff !important;
 }
 
 .LandingHeader_settings ul {
     margin-top: 10px !important;
     margin-left: 30px !important;
-    background: #006600;
+    background: #2e5806;
 }
 
 .LandingHeader_prof_details h6 {
