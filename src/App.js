@@ -21,12 +21,14 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter >
-                <FormsMenu path='/product-monitoring-system'>
+                <FormsMenu>
                     <Routes>
-                        <Route index element={<FormsMenu />} />
-                        <Route path="/qmr/paper" element={<QMR />} />
-                        <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
-                        <Route path="/car" element={<CAR />} />
+                        <Route path='/product-monitoring-system'>
+                            <Route index element={<FormsMenu />} />
+                            <Route path="/qmr/paper" element={<QMR />} />
+                            <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
+                            <Route path="/car" element={<CAR />} />
+                        </Route>
                     </Routes>
                 </FormsMenu>
             </BrowserRouter>
