@@ -23,6 +23,7 @@ class App extends Component {
             <BrowserRouter >
                 <FormsMenu path='/product-monitoring-system'>
                     <Routes>
+                        <Route index element={<FormsMenu />} />
                         <Route path="/qmr/paper" element={<QMR />} />
                         <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
                         <Route path="/car" element={<CAR />} />
