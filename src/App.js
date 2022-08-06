@@ -21,7 +21,7 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter >
-                <FormsMenu>
+                <FormsMenu path='/product-monitoring-system'>
                     <Routes>
                         <Route path="/qmr/paper" element={<QMR />} />
                         <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
