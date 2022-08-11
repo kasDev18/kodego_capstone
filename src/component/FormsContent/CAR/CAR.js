@@ -44,6 +44,11 @@ class CAR extends Component {
     }
 
     fetch('http://localhost:8000/car', requestOptions)
+    // .then(result => result.json())
+    // .then(response => {
+    //   this.setState({ response: this.state.response })
+    // })
+
   }
 
   onSubmit() {
