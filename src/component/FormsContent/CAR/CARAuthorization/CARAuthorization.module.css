@@ -1,0 +1,26 @@
+.CAR_problem_analysis {
+    height: 300px;
+    border: 1px solid #f4ee0f;
+}
+
+.CAR_created_by span {
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.CAR_final_recommendation {
+    height: 300px;
+    border: 1px solid #f4ee0f;
+}
+
+.CAR_final_recommendation hr {
+    border: 1px solid #fff;
+}
+
+.CAR_approval {
+    flex-direction: column;
+    justify-content: end;
+}

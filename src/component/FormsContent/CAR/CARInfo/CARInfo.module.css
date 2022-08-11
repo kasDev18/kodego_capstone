@@ -1,0 +1,12 @@
+.QMR_input_info span,
+.QMR_input_info label {
+    text-transform: uppercase;
+    background: #2e5806;
+    color: #fff;
+    font-size: 12px;
+}
+
+.QMR_input_info input:focus,
+.QMR_input_info select:focus {
+    box-shadow: none;
+}

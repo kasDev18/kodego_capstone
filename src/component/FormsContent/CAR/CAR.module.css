@@ -13,19 +13,6 @@
     color: antiquewhite !important;
 }
 
-.QMR_input_info span,
-.QMR_input_info label {
-    text-transform: uppercase;
-    background: #2e5806;
-    color: #fff;
-    font-size: 12px;
-}
-
-.QMR_input_info input:focus,
-.QMR_input_info select:focus {
-    box-shadow: none;
-}
-
 .QMR_legend {
     height: 50px;
     border: 2mm ridge #f4ee0f;
@@ -59,56 +46,4 @@
 
 .quality_quantity_reject:focus {
     border: none;
-}
-
-.CAR_classification_title h6 {
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.CAR_classification_list {
-    padding: 0 24px;
-}
-
-.CAR_workflow_plan {
-    height: 250px;
-    border: 1px solid #fff;
-}
-
-.CAR_workflow_plan img {
-    height: 200px;
-    width: 90%;
-}
-
-.CAR_related_issues {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.CAR_problem_analysis {
-    height: 300px;
-    border: 1px solid #f4ee0f;
-}
-
-.CAR_created_by span {
-    text-transform: uppercase;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-}
-
-.CAR_final_recommendation {
-    height: 300px;
-    border: 1px solid #f4ee0f;
-}
-
-.CAR_final_recommendation hr {
-    border: 1px solid #fff;
-}
-
-.CAR_approval {
-    flex-direction: column;
-    justify-content: end;
 }

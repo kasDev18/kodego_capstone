@@ -1,0 +1,8 @@
+.CAR_classification_title h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.CAR_classification_list {
+    padding: 0 24px;
+}

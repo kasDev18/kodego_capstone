@@ -1,0 +1,15 @@
+.CAR_workflow_plan {
+    height: 250px;
+    border: 1px solid #fff;
+}
+
+.CAR_workflow_plan img {
+    height: 200px;
+    width: 90%;
+}
+
+.CAR_related_issues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
