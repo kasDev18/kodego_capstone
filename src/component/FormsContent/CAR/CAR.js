@@ -32,6 +32,7 @@ class CAR extends Component {
       dept_head: e.target.dept_head.value,
       classification: e.target.classification.value,
       related_issues: e.target.related_issues.value,
+      rel_issues_others_desc: e.target.rel_issues_others_desc.value,
       station_detected: e.target.station_detected.value,
       created_by: e.target.created_by.value,
       supervisor: e.target.supervisor.value,

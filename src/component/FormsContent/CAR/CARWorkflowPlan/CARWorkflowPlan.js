@@ -44,6 +44,7 @@ class CARWorkflowPlan extends Component {
           <div className='px-5 pt-3'>
             {this.related_issues_array}
           </div>
+          <textarea placeholder='Specify if others...' name='rel_issues_others_desc'></textarea>
         </div>
       </div>
     )
