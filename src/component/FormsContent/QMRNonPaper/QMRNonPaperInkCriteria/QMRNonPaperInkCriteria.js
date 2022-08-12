@@ -3,9 +3,9 @@ import styles from './QMRNonPaperInkCriteria.module.css';
 
 class QMRNonPaperInkCriteria extends Component {
   non_paper_quantity_quality = [
-    { list: 'Presence of Discoloration(Off-color)', radio_name_accept: 'qualityQuantityNameAccept1', radio_name_reject: 'qualityQuantityNameAccept1' },
-    { list: 'Presence of Foreign Materials', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
-    { list: 'No Missing Quantity', radio_name_accept: 'qualityQuantityNameAccept3', radio_name_reject: 'qualityQuantityNameAccept3' },
+    { list: 'No Missing Quantity', radio_name_accept: 'complete_qty', radio_name_reject: 'complete_qty' },
+    { list: 'Presence of Discoloration(Off-color)', radio_name_accept: 'discoloration', radio_name_reject: 'discoloration' },
+    { list: 'Presence of Foreign Materials', radio_name_accept: 'foreign_mat', radio_name_reject: 'foreign_mat' }
   ]
   non_paper_quantity_quality_array = [];
 
@@ -18,13 +18,13 @@ class QMRNonPaperInkCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Reject
               </label>
@@ -36,9 +36,9 @@ class QMRNonPaperInkCriteria extends Component {
   }
 
   non_paper_quantity_container = [
-    { list: 'Presence of Dent/Broken Container', radio_name_accept: 'qualityQuantityNameAccept1', radio_name_reject: 'qualityQuantityNameAccept1' },
-    { list: 'Presence of Leak', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
-    { list: 'Presence of Liquid Contamination', radio_name_accept: 'qualityQuantityNameAccept3', radio_name_reject: 'qualityQuantityNameAccept3' },
+    { list: 'Presence of Dent/Broken Container', radio_name_accept: 'dent_broken', radio_name_reject: 'dent_broken' },
+    { list: 'Presence of Leak', radio_name_accept: 'leak', radio_name_reject: 'leak' },
+    { list: 'Presence of Liquid Contamination', radio_name_accept: 'liquid_contam', radio_name_reject: 'liquid_contam' },
   ]
   non_paper_quantity_container_array = [];
 
@@ -51,13 +51,13 @@ class QMRNonPaperInkCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Reject
               </label>
@@ -69,8 +69,8 @@ class QMRNonPaperInkCriteria extends Component {
   }
 
   non_paper_handling = [
-    { list: 'Mishandling of Product', radio_name_accept: 'qualityQuantityNameAccept1', radio_name_reject: 'qualityQuantityNameAccept1' },
-    { list: 'Proper Arrangement of Products in Warehouse', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
+    { list: 'Mishandling of Product', radio_name_accept: 'mishandling', radio_name_reject: 'mishandling' },
+    { list: 'Proper Arrangement of Products in Warehouse', radio_name_accept: 'proper_arrangement', radio_name_reject: 'proper_arrangement' },
   ]
   non_paper_handling_array = [];
 
@@ -83,13 +83,13 @@ class QMRNonPaperInkCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Reject
               </label>
@@ -101,11 +101,13 @@ class QMRNonPaperInkCriteria extends Component {
   }
 
   non_paper_documents = [
-    { list: 'No Missing Documents', radio_name_accept: 'qualityQuantityNameAccept1', radio_name_reject: 'qualityQuantityNameAccept1' },
-    { list: 'Documents are Completely Signed by Concerned Personnel', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
-    { list: 'No Tampering, Contamination, or Crumpled Parts in the Documents', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
-    { list: 'Documents are Original only and not Photocopy/Xerox', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
-    { list: 'Documents are Secured with Plastic Cover', radio_name_accept: 'qualityQuantityNameAccept2', radio_name_reject: 'qualityQuantityNameAccept2' },
+    { list: 'No Missing Documents', radio_name_accept: 'missing_docs', radio_name_reject: 'missing_docs' },
+    { list: 'Documents are Completely Signed by Concerned Personnel', radio_name_accept: 'signed', radio_name_reject: 'signed' },
+    { list: 'No Tampering in the Documents', radio_name_accept: 'tampering', radio_name_reject: 'tampering' },
+    { list: 'No Contamination in the Documents', radio_name_accept: 'docs_contam', radio_name_reject: 'docs_contam' },
+    { list: 'No Crumpled Parts in the Documents', radio_name_accept: 'crumpled', radio_name_reject: 'crumpled' },
+    { list: 'Documents are Original only and not Photocopy/Xerox', radio_name_accept: 'orig', radio_name_reject: 'orig' },
+    { list: 'Documents are Secured with Plastic Cover', radio_name_accept: 'secured', radio_name_reject: 'secured' },
   ]
   non_paper_documents_array = [];
 
@@ -118,13 +120,13 @@ class QMRNonPaperInkCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Reject
               </label>

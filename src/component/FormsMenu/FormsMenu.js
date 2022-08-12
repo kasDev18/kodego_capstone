@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Loader from '../../Loader/Loader';
-import FormsContent from '../FormsContent/FormsContent';
 import LandingHeader from '../Landing/LandingHeader/LandingHeader';
 import Position from '../Position/Position';
 import styles from './FormsMenu.module.css';
