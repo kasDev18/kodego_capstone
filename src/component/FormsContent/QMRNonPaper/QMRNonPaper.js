@@ -44,6 +44,10 @@ class QMRNonPaper extends Component {
     fetch('http://localhost:8000/qmr_ink', requestOptions)
   }
 
+  onSubmit() {
+    alert('You have submitted a report')
+  }
+
   render() {
     return (
       <form onSubmit={this.submitData}>
@@ -66,7 +70,7 @@ class QMRNonPaper extends Component {
           </div>
           <div className='d-flex justify-content-end p-3 mx-2'>
             <div className='mx-1'>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" onClick={this.onSubmit} class="btn btn-success">Submit</button>
             </div>
             <div className='mx-1'>
               <button type="button" class="btn btn-primary">Print</button>
