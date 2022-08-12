@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styles from './CARClassification.module.css';
 
 class CARClassification extends Component {

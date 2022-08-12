@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styles from './CARWorkflowPlan.module.css';
 import reject_flow from './image/20121212111931_59859.jpg'
 

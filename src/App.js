@@ -1,9 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Login from './Login/Login';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Signup from './Signup/Signup';
-import Landing from './component/Landing/Landing';
 import QMR from './component/FormsContent/QMR/QMR';
 import CAR from './component/FormsContent/CAR/CAR';
 import FormsMenu from './component/FormsMenu/FormsMenu';

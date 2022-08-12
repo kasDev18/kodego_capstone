@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styles from './LanguageSelector.module.css';
 import { FormGroup, Input } from 'reactstrap';
 import axios from 'axios';

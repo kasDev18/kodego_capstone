@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './LandingHeader.module.css';
 import logo from './images/1525506679828.jpg';
 import profile from './images/th.png';

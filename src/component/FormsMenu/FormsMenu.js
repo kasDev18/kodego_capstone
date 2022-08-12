@@ -5,16 +5,6 @@ import LandingHeader from '../Landing/LandingHeader/LandingHeader';
 import Position from '../Position/Position';
 import styles from './FormsMenu.module.css';
 
-// getData = () => {
-//   setTimeout(() => {
-//     fetch('')
-//       .then(result => result)
-//       .then((response) => {
-//         this.setState({ loader: true });
-//       })
-//   }, 1500);
-// }
-// getData();
 
 const FormsMenu = ({ children }) => {
   const [data, setData] = useState(true);
@@ -33,17 +23,14 @@ const FormsMenu = ({ children }) => {
     {
       path: "/qmr/paper",
       name: "QMR(Paper)",
-      icon: ""
     },
     {
       path: "/qmr/non_paper",
       name: "QMR(Non-Paper)",
-      icon: ""
     },
     {
       path: "/car",
       name: "CAR",
-      icon: ""
     }
   ]
 

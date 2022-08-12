@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styles from './QMRPaperCriteria.module.css';
 
 class QMRPaperCriteria extends Component {
