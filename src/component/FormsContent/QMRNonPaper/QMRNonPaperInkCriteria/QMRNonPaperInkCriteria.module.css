@@ -1,0 +1,11 @@
+.quality_quantity_cont {
+    border-bottom: 2px solid #fff;
+}
+
+.quality_quantity_accept:focus {
+    border: none;
+}
+
+.quality_quantity_reject:focus {
+    border: none;
+}
