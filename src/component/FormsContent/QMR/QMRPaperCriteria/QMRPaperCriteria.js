@@ -122,7 +122,7 @@ class QMRPaperCriteria extends Component {
           {this.paper_handling_array}
         </div>
         <div className={styles.QMR_paper_criteria_title + ' mt-5'}>
-          <h6 className={styles + ' text-warning'}>B. Documents:</h6>
+          <h6 className={styles + ' text-warning'}>C. Documents:</h6>
           {this.paper_documents_array}
         </div>
       </div>

@@ -33,10 +33,6 @@ class QMRNonPaperInfo extends Component {
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" htmlFor="inputGroupSelect01">Ink Color</label>
-              {/* <select className="form-select" id="inputGroupSelect01" name='department'>
-                <option selected="" className='d-none'>Department</option>
-                {this.department_array}
-              </select> */}
               <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='ink_color' />
             </div>
           </div>
