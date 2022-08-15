@@ -10,7 +10,7 @@ const LandingHeader = () => (
   <div className={styles.LandingHeader + '  d-flex justify-content-center align-items-center'}>
     <div className={styles.LandingHeader_col_1 + ' col-7 d-flex align-items-center'}>
       <div className={styles + ' mx-2'}>
-        <img src={logo} class="img-fluid border rounded-circle" alt="..." width={"40px"} height={"40px"} />
+        <img src={logo} className="img-fluid border rounded-circle" alt="..." width={"40px"} height={"40px"} />
       </div>
       <div className={styles + ' text-white mx-2 pt-2'}>
         <h6>{i18next.t('fpc_qa_pms')}</h6>
@@ -19,14 +19,14 @@ const LandingHeader = () => (
     <div className={styles + ' col d-flex justify-content-end align-items-center px-5'}>
       <LanguageSelector />
       <div className={styles.LandingHeader_settings + ' dropdown'}>
-        <i class="fa-solid fa-user text-light"></i>
+        <i className="fa-solid fa-user text-light"></i>
         <a className={styles.LandingHeader_settings_dropdown + ' btn btn-transparent border border-0 dropdown-toggle'} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           Username
         </a>
 
-        <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuLink">
+        <ul className="dropdown-menu shadow" aria-labelledby="dropdownMenuLink">
           <div className={styles.LandingHeader_profile + ' d-flex justify-content-center p-2'}>
-            <img src={profile} class="img-fluid m-3 border rounded-circle" alt="..." width={"70px"} height={"70px"} />
+            <img src={profile} className="img-fluid m-3 border rounded-circle" alt="..." width={"70px"} height={"70px"} />
           </div>
           <div className={styles.LandingHeader_prof_details + ' text-light'}>
             <div className={styles + ' d-flex justify-content-center'}>
@@ -36,7 +36,7 @@ const LandingHeader = () => (
               <h6>USERNAME</h6>
             </div>
           </div>
-          <li className={styles + ' px-5'}><a class="dropdown-item text-warning text-center border border-warning" href="#">Logout  </a></li>
+          <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="#">Logout  </a></li>
         </ul>
       </div>
     </div>

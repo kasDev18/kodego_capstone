@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './QMRNonPaper.module.css';
 import QMRNonPaperInfo from './QMRNonPaperInfo/QMRNonPaperInfo';
-import QMRNonPaperInkColor from './QMRNonPaperInkColor/QMRNonPaperInkColor';
 import QMRNonPaperLegend from './QMRNonPaperLegend/QMRNonPaperLegend';
 import QMRNonPaperInkCriteria from './QMRNonPaperInkCriteria/QMRNonPaperInkCriteria';
 
@@ -11,7 +10,7 @@ class QMRNonPaper extends Component {
     e.preventDefault();
     let inkData = {
       name: e.target.name.value,
-      department: e.target.department.value,
+      ink_color: e.target.ink_color.value,
       date: e.target.date.value,
       prod_type: e.target.prod_type.value,
       prod_name: e.target.prod_name.value,
@@ -63,17 +62,16 @@ class QMRNonPaper extends Component {
               <span className={styles + ' text-light mx-3'}>Please choose carefully the right answer below</span>
             </div>
             <div className='p-3'>
-              <QMRNonPaperInkColor />
               <QMRNonPaperLegend />
             </div>
             <QMRNonPaperInkCriteria />
           </div>
           <div className='d-flex justify-content-end p-3 mx-2'>
             <div className='mx-1'>
-              <button type="submit" onClick={this.onSubmit} class="btn btn-success">Submit</button>
+              <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
             </div>
             <div className='mx-1'>
-              <button type="button" class="btn btn-primary">Print</button>
+              <button type="button" className="btn btn-primary">Print</button>
             </div>
           </div>
         </div>

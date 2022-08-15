@@ -64,10 +64,10 @@ class QMR extends Component {
           </div>
           <div className='d-flex justify-content-end p-3 mx-2'>
             <div className='mx-1'>
-              <button type="submit" onClick={this.onSubmit} class="btn btn-success">Submit</button>
+              <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
             </div>
             <div className='mx-1'>
-              <button type="button" class="btn btn-primary">Print</button>
+              <button type="button" className="btn btn-primary">Print</button>
             </div>
           </div>
         </div>

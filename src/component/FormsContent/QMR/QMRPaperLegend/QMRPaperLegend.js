@@ -10,17 +10,17 @@ const QMRPaperLegend = () => (
         </div>
         <div className='d-flex mx-2'>
           <div className={styles.QMR_legend_criteria + ' mx-2'}>
-            <div class="form-check">
-              <input class="form-check-input border rounded-circle bg-success" name="flexRadioDefault" id="flexRadioDefault1" />
-              <label class="form-check-label text-light" for="flexRadioDefault1">
+            <div className="form-check">
+              <input className="form-check-input border rounded-circle bg-success" name="flexRadioDefault" id="flexRadioDefault1" />
+              <label className="form-check-label text-light" htmlFor="flexRadioDefault1">
                 Accept-No Evidence of Discrepancy/Passed in Criteria
               </label>
             </div>
           </div>
           <div className={styles.QMR_legend_criteria + ' mx-2'}>
-            <div class="form-check">
-              <input class="form-check-input border rounded-circle bg-danger" name="flexRadioDefault" id="flexRadioDefault1" />
-              <label class="form-check-label text-light" for="flexRadioDefault1">
+            <div className="form-check">
+              <input className="form-check-input border rounded-circle bg-danger" name="flexRadioDefault" id="flexRadioDefault1" />
+              <label class="form-check-label text-light" htmlFor="flexRadioDefault1">
                 Reject-Failed in Criteria
               </label>
             </div>

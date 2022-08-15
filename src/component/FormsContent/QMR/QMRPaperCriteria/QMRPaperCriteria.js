@@ -24,13 +24,13 @@ class QMRPaperCriteria extends Component {
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} value="Accept" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} value="Reject" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>
@@ -56,13 +56,13 @@ class QMRPaperCriteria extends Component {
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id="flexRadioDefault1" value="Reject" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>
@@ -91,13 +91,13 @@ class QMRPaperCriteria extends Component {
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
               <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id="flexRadioDefault1" value="Reject" />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>

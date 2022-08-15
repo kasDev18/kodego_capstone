@@ -12,10 +12,10 @@ class CARAuthorization extends Component {
   station_detected_array = [];
 
   CreateStationDetectedArray = () => {
-    this.station_detected_array = this.station_detected.map((element) => (
-      <div>
+    this.station_detected_array = this.station_detected.map((element, index) => (
+      <div key={index}>
         <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.name} id='random' value={element.value} />
-        <label class="form-check-label mx-2" for="flexRadioDefault1">
+        <label className="form-check-label mx-2" htmlFor="flexRadioDefault1">
           {element.stations}
         </label>
       </div>
@@ -41,24 +41,24 @@ class CARAuthorization extends Component {
         </div>
         <div className='p-3 pt-5 mx-3'>
           <div className='d-flex'>
-            <div class="col-5">
+            <div className="col-5">
               <div className={styles.CAR_created_by + ' input-group input-group-sm mb-3 col bg-transparent'}>
                 <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">Created by:</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='created_by' />
+                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='created_by' />
               </div>
             </div>
             <div className='col mx-3'>
               <div className={styles.CAR_created_by + ' input-group input-group-sm mb-3 col bg-transparent'}>
                 <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">Supervisor:</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supervisor' />
+                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supervisor' />
               </div>
             </div>
           </div>
           <div className='d-flex'>
-            <div class="col-5">
+            <div className="col-5">
               <div className={styles.CAR_created_by + ' input-group input-group-sm mb-3 col bg-transparent'}>
                 <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">Position:</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='position' />
+                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='position' />
               </div>
             </div>
           </div>

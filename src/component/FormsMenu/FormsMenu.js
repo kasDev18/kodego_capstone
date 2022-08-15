@@ -50,7 +50,7 @@ const FormsMenu = ({ children }) => {
             </div>
             {
               menuItem.map((item, index) => (
-                <NavLink to={item.path} key={index} activeclassName="active" className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+                <NavLink to={item.path} key={index} activeclassname="active" className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
                   < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>{item.name}</h6>
                 </NavLink>
               ))

@@ -13,11 +13,11 @@ class CARWorkflowPlan extends Component {
   related_issues_array = [];
 
   CreateRelatedIssuesArray = () => {
-    this.related_issues_array = this.related_issues.map((element) => (
-      <div className={styles + ' d-flex'}>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" value={element.value} id="flexCheckDefault" name={element.name} />
-          <label class="form-check-label" for="flexCheckDefault">
+    this.related_issues_array = this.related_issues.map((element, index) => (
+      <div className={styles + ' d-flex'} key={index}>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" value={element.value} id="flexCheckDefault" name={element.name} />
+          <label className="form-check-label" htmlFor="flexCheckDefault">
             {element.issues}
           </label>
         </div>
@@ -34,7 +34,7 @@ class CARWorkflowPlan extends Component {
             <h5>Reject Workflow Plan</h5>
           </div>
           <div className='d-flex justify-content-center'>
-            <img src={reject_flow} class="img-fluid" alt="..." />
+            <img src={reject_flow} className="img-fluid" alt="..." />
           </div>
         </div>
         <div className={styles.CAR_related_issues + ' col pt-4 text-warning'}>
