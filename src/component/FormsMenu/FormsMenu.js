@@ -4,6 +4,8 @@ import Loader from '../../Loader/Loader';
 import LandingHeader from '../Landing/LandingHeader/LandingHeader';
 import Position from '../Position/Position';
 import styles from './FormsMenu.module.css';
+import axios from 'axios';
+import i18next from 'i18next'
 
 
 const FormsMenu = ({ children }) => {
@@ -51,7 +53,7 @@ const FormsMenu = ({ children }) => {
             {
               menuItem.map((item, index) => (
                 <NavLink to={item.path} key={index} activeclassname="active" className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>{item.name}</h6>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>{i18next.t(item.name)}</h6>
                 </NavLink>
               ))
             }

@@ -1,28 +1,11 @@
 import React, { Component } from 'react';
 import styles from './Position.module.css';
+import axios from 'axios';
+import i18next from 'i18next'
 
 class Position extends Component {
-  position = [
-    { position: "Supervisor" },
-    { position: "Assistant Supervisor" },
-    { position: "Calibration Officer" },
-    { position: "QA Analyst" },
-    { position: "Technical Engineer" },
-    { position: "Ink and Chemical Clerk" },
-    { position: "Inspector" }
-  ];
-  position_array = {};
-
-  CreatePositionArray() {
-    this.position_array = this.position.map((element) => (
-      <div className={styles.Position_designation + ' text-dark p-2'}>
-        <h6 className={styles + ' pt-1'}>{element.position}</h6>
-      </div>
-    ))
-  }
 
   render() {
-    this.CreatePositionArray();
     return (
       <div className={styles.Position + ' border rounded col-2 mx-1'}>
         <div className={styles.Position_content + ' p-3'}>
@@ -30,7 +13,27 @@ class Position extends Component {
             <h5 className="text-uppercase fw-bolder text-decoration-underline">Position</h5>
           </div>
           <div>
-            {this.position_array}
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Supervisor')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Assistant Supervisor')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Calibration Officer')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('QA Analyst')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Technical Engineer')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Ink and Chemical Clerk')}</h6>
+            </div>
+            <div className={styles.Position_designation + ' text-dark p-2'}>
+              <h6 className={styles + ' pt-1'}>{i18next.t('Inspector')}</h6>
+            </div>
           </div>
         </div>
       </div>

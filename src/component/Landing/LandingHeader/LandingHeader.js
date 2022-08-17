@@ -21,7 +21,7 @@ const LandingHeader = () => (
       <div className={styles.LandingHeader_settings + ' dropdown'}>
         <i className="fa-solid fa-user text-light"></i>
         <a className={styles.LandingHeader_settings_dropdown + ' btn btn-transparent border border-0 dropdown-toggle'} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          Username
+          {i18next.t('Username')}
         </a>
 
         <ul className="dropdown-menu shadow" aria-labelledby="dropdownMenuLink">
@@ -30,13 +30,13 @@ const LandingHeader = () => (
           </div>
           <div className={styles.LandingHeader_prof_details + ' text-light'}>
             <div className={styles + ' d-flex justify-content-center'}>
-              <h6>ID: #123456</h6>
+              <h6>{i18next.t('ID: #123456')}</h6>
             </div>
             <div className={styles + ' d-flex justify-content-center'}>
-              <h6>USERNAME</h6>
+              <h6>{i18next.t('Username')}</h6>
             </div>
           </div>
-          <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="#">Logout  </a></li>
+          <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="#">{i18next.t('Logout')}</a></li>
         </ul>
       </div>
     </div>
