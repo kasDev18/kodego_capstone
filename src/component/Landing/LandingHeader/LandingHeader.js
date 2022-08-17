@@ -36,7 +36,7 @@ const LandingHeader = () => (
               <h6>{i18next.t('Username')}</h6>
             </div>
           </div>
-          <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="/https://fpc-qa-login.netlify.app/">{i18next.t('Logout')}</a></li>
+          <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="https://fpc-qa-login.netlify.app/">{i18next.t('Logout')}</a></li>
         </ul>
       </div>
     </div>
