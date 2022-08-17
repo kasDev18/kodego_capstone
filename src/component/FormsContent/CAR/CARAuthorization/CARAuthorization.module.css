@@ -24,3 +24,8 @@
     flex-direction: column;
     justify-content: end;
 }
+
+.CAR_problem_analysis textarea {
+    width: 90%;
+    height: 80%;
+}

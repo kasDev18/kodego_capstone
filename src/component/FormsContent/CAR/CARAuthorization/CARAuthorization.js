@@ -35,8 +35,11 @@ class CARAuthorization extends Component {
               {this.station_detected_array}
             </div>
           </div>
-          <div className={styles.CAR_problem_analysis + ' col-8 mx-4'}>
-
+          <div className={styles.CAR_problem_analysis + ' col-8 mx-4 p-3'}>
+            <div className={styles + ' col text-warning d-flex justify-content-center'}>
+              <h5>Problem/Analysis:</h5>
+            </div>
+            <textarea className='mx-4'></textarea>
           </div>
         </div>
         <div className='p-3 pt-5 mx-3'>
