@@ -21,17 +21,8 @@ class App extends Component {
         }
     }
 
-    Location() {
-        if (window.location.pathname === '/login') {
-            this.setState({ hidden: true })
-        } else {
-            this.setState({ hidden: false })
-        }
-    }
-
     componentDidMount() {
-        this.Location();
-        this.RedirectLogin()
+        this.RedirectLogin();
     }
 
     render() {
@@ -39,17 +30,11 @@ class App extends Component {
             <BrowserRouter >
                 <Routes>
                     <Route index path='/login' element={<Login />}></Route>
+                    <Route index path='/product-monitoring-system' element={<FormsMenu />}></Route>
+                    <Route path="/qmr/paper" element={<QMR />} />
+                    <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
+                    <Route path="/car" element={<CAR />} />
                 </Routes>
-                {
-                    !this.state.hidden ?
-                        <FormsMenu path='/product-monitoring-system'>
-                            <Routes>
-                                <Route path="/qmr/paper" element={<QMR />} />
-                                <Route path="/qmr/non_paper" element={<QMRNonPaper />} />
-                                <Route path="/car" element={<CAR />} />
-                            </Routes>
-                        </FormsMenu> : ''
-                }
             </BrowserRouter>
         );
     }

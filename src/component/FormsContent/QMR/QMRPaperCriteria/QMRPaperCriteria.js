@@ -75,7 +75,9 @@ class QMRPaperCriteria extends Component {
   paper_documents = [
     { list: 'No Missing Documents', radio_name_accept: 'missing_docs', radio_name_reject: 'missing_docs' },
     { list: 'Documents are Completely Signed by Concerned Personnel', radio_name_accept: 'signed', radio_name_reject: 'signed' },
-    { list: 'No Tampering, Contamination, or Crumpled Parts in the Documents', radio_name_accept: 'tampering', radio_name_reject: 'tampering' },
+    { list: 'No Tampering in the Documents', radio_name_accept: 'tampering', radio_name_reject: 'tampering' },
+    { list: 'No Any Signs of Contamination in the Documents', radio_name_accept: 'liquid_contamination', radio_name_reject: 'liquid_contamination' },
+    { list: 'No Crumpled Parts in the Documents', radio_name_accept: 'crumpled', radio_name_reject: 'crumpled' },
     { list: 'Documents are Original only and not Photocopy/Xerox', radio_name_accept: 'orig_docs', radio_name_reject: 'orig_docs' },
     { list: 'Documents are Secured with Plastic Cover', radio_name_accept: 'secured', radio_name_reject: 'secured' }
   ]

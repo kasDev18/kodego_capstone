@@ -6,14 +6,29 @@ import CARInfo from './CARInfo/CARInfo';
 import CARClassification from './CARClassification/CARClassification';
 import CARWorkflowPlan from './CARWorkflowPlan/CARWorkflowPlan';
 import CARAuthorization from './CARAuthorization/CARAuthorization';
+import LandingHeader from '../../Landing/LandingHeader/LandingHeader';
+import Position from '../../Position/Position';
 
 class CAR extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: [],
-      data: false,
+      hidden: true,
     }
+  }
+
+  getCAR() {
+    setTimeout(() => {
+      fetch("")
+        .then(result => result)
+        .then((data) => {
+          this.setState({ hidden: false })
+        })
+    }, 2000);
+  }
+
+  componentDidMount() {
+    this.getCAR();
   }
 
   submitData(e) {
@@ -58,37 +73,63 @@ class CAR extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitData}>
-        <div className={styles.QMR}>
-          <div className={styles.QMR_title + ' d-flex text-light pt-2 px-2'}>
-            <div className='col'>
-              <h5><i className="text-light">Corrective Action Report</i></h5>
+      <>
+        {
+          !this.state.hidden ? <div className={styles.Landing}>
+            <LandingHeader />
+            <div className={styles.content + ' d-flex p-3 px-5'}>
+              <Position />
+              <div className={styles.FormsContent + '  col-8 container p-2'}>
+                <form onSubmit={this.submitData}>
+                  <div className={styles.QMR}>
+                    <div className={styles.QMR_title + ' d-flex text-light pt-2 px-2'}>
+                      <div className='col'>
+                        <h5><i className="text-light">Corrective Action Report</i></h5>
+                      </div>
+                      <div className='col d-flex justify-content-end mx-1'>
+                        <h5><i className="text-light">REV# - 001</i></h5>
+                      </div>
+                    </div>
+                    <hr className='text-muted mx-2'></hr>
+                    <div className='p-2'>
+                      <CARInfo />
+                      <hr></hr>
+                      <CARClassification />
+                      <hr className='mx-2'></hr>
+                      <CARWorkflowPlan />
+                    </div>
+                    <hr className='mx-2'></hr>
+                    <CARAuthorization />
+                    <hr className='mx-2'></hr>
+                    <div className='d-flex justify-content-end p-3 mx-2'>
+                      <div className='mx-1'>
+                        <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
+                      </div>
+                      <div className='mx-1'>
+                        <button type="button" className="btn btn-primary">Print</button>
+                      </div>
+                    </div>
+                  </div >
+                </form>
+              </div>
+              <div className={styles.Forms_cont + ' border rounded col-2 mx-1 p-3'}>
+                <div className={styles + ' d-flex justify-content-center text-success p-3'}>
+                  <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
+                </div>
+                <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+                </div>
+                <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Non-Paper)</h6>
+                </div>
+                <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>CAR</h6>
+                </div>
+              </div>
             </div>
-            <div className='col d-flex justify-content-end mx-1'>
-              <h5><i className="text-light">REV# - 001</i></h5>
-            </div>
-          </div>
-          <hr className='text-muted mx-2'></hr>
-          <div className='p-2'>
-            <CARInfo />
-            <hr></hr>
-            <CARClassification />
-            <hr className='mx-2'></hr>
-            <CARWorkflowPlan />
-          </div>
-          <hr className='mx-2'></hr>
-          <CARAuthorization />
-          <hr className='mx-2'></hr>
-          <div className='d-flex justify-content-end p-3 mx-2'>
-            <div className='mx-1'>
-              <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
-            </div>
-            <div className='mx-1'>
-              <button type="button" className="btn btn-primary">Print</button>
-            </div>
-          </div>
-        </div >
-      </form>
+          </div > : <Loader />
+        }
+      </>
     )
   }
 }

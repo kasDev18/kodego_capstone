@@ -17,3 +17,24 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.FormsContent {
+    background: #d8d8d8;
+}
+
+.Forms_Records:hover h6 {
+    background-color: #006600;
+    color: #fff !important;
+    transition: .5s;
+}
+
+.Forms_Records:nth-child(3) h6 {
+    background-color: #006600;
+    color: #fff !important;
+    font-size: 15px;
+}
+
+.Forms_cont {
+    height: 86vh;
+    background: #d8d8d8;
+}

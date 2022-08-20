@@ -29,7 +29,7 @@ class CARClassification extends Component {
 
   CreateClassification2Array = () => {
     this.classification_2_array = this.classification_2.map((element, index) => (
-      <div className={styles + ' form-check mt-3 mx-5'} key={index}>
+      <div className={styles + ' form-check mt-3 mx-5 col-10'} key={index}>
         <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.classif_name} id='random' value={element.value} required />
         <label className="form-check-label" htmlFor="flexRadioDefault1">
           {element.classif_option}

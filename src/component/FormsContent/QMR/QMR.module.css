@@ -1,8 +1,8 @@
 .QMR {
     /* background: #2e5806; */
     background: #006600;
-    /* overflow: scroll;
-    height: 83.7vh; */
+    overflow: scroll;
+    height: 83.7vh;
 }
 
 .QMR_title h5 {
@@ -11,4 +11,25 @@
 
 .QMR hr {
     color: antiquewhite !important;
+}
+
+.FormsContent {
+    background: #d8d8d8;
+}
+
+.Forms_Records:hover h6 {
+    background-color: #006600;
+    color: #fff !important;
+    transition: .5s;
+}
+
+.Forms_Records:nth-child(2) h6 {
+    background-color: #006600;
+    color: #fff !important;
+    font-size: 15px;
+}
+
+.Forms_cont {
+    height: 86vh;
+    background: #d8d8d8;
 }

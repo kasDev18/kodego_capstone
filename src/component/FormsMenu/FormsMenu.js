@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Loader from '../../Loader/Loader';
 import LandingHeader from '../Landing/LandingHeader/LandingHeader';
 import Position from '../Position/Position';
@@ -8,7 +8,7 @@ import axios from 'axios';
 import i18next from 'i18next'
 
 
-const FormsMenu = ({ children }) => {
+const FormsMenu = () => {
   const [data, setData] = useState(true);
 
   useEffect(() => {
@@ -21,21 +21,6 @@ const FormsMenu = ({ children }) => {
     }, 2000);
   })
 
-  const menuItem = [
-    {
-      path: "/qmr/paper",
-      name: "QMR(Paper)",
-    },
-    {
-      path: "/qmr/non_paper",
-      name: "QMR(Non-Paper)",
-    },
-    {
-      path: "/car",
-      name: "CAR",
-    }
-  ]
-
 
   return (
     (
@@ -44,19 +29,20 @@ const FormsMenu = ({ children }) => {
         <div className={styles.content + ' d-flex p-3 px-5'}>
           <Position />
           <div className={styles.FormsContent + '  col-8 container p-2'}>
-            {children}
           </div>
           <div className={styles.Forms_cont + ' border rounded col-2 mx-1 p-3'}>
             <div className={styles + ' d-flex justify-content-center text-success p-3'}>
               <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
             </div>
-            {
-              menuItem.map((item, index) => (
-                <NavLink to={item.path} key={index} activeclassname="active" className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>{i18next.t(item.name)}</h6>
-                </NavLink>
-              ))
-            }
+            <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+            </div>
+            <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+            </div>
+            <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+            </div>
           </div>
         </div>
       </div > : <Loader />
