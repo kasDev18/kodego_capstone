@@ -23,13 +23,13 @@ class QMRPaperCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} value="Accept" />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id={element.radio_id_accept} value="Accept" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} value="Reject" />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id={element.radio_id_reject} value="Reject" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
@@ -55,7 +55,7 @@ class QMRPaperCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
@@ -90,13 +90,13 @@ class QMRPaperCriteria extends Component {
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} id="flexRadioDefault1" value="Accept" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id="flexRadioDefault1" value="Reject" />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} id="flexRadioDefault1" value="Reject" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>

@@ -29,13 +29,13 @@ class QMRPaperInfo extends Component {
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">{i18next.t("name")}</span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' />
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' required />
             </div>
           </div>
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" for="inputGroupSelect01">{i18next.t("Department")}</label>
-              <select className="form-select" id="inputGroupSelect01" name='dept_name'>
+              <select className="form-select" id="inputGroupSelect01" name='dept_name' required>
                 <option selected className='d-none'>{i18next.t("Department")}</option>
                 {this.department_array}
               </select>
@@ -44,7 +44,7 @@ class QMRPaperInfo extends Component {
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("Date")}</span>
-              <input type="date" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='date' />
+              <input type="date" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='date' required />
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ class QMRPaperInfo extends Component {
           <div className="col-3">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" for="inputGroupSelect01">{i18next.t("Type")}</label>
-              <select className="form-select" id="inputGroupSelect01" name='prod_type'>
+              <select className="form-select" id="inputGroupSelect01" name='prod_type' required>
                 <option selected="" className="d-none">{i18next.t("Type")}</option>
                 <option value="Rolls">{i18next.t("Rolls")}</option>
                 <option value="Sheets">{i18next.t("Sheets")}</option>
@@ -62,13 +62,13 @@ class QMRPaperInfo extends Component {
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("ProdName")}</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='prod_name' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='prod_name' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("Supplier")}</span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supplier' />
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supplier' required />
             </div>
           </div>
         </div>
@@ -76,19 +76,19 @@ class QMRPaperInfo extends Component {
           <div className="col-3">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("Quantity")}</span>
-              <input type="number" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='qty' />
+              <input type="number" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='qty' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("Doc. Number:")}</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='doc_number' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='doc_number' required />
             </div>
           </div>
           <div className="col-5">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">{i18next.t("Dept. Head")}</span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='dept_head' />
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='dept_head' required />
             </div>
           </div>
         </div>

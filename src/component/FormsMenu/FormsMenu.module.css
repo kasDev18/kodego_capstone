@@ -13,6 +13,12 @@
     transition: .5s;
 }
 
+.FormsMenu.navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: #006600 !important;
+}
+
 /* 
 .Forms_list {
     height: 60px !important;

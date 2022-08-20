@@ -8,6 +8,7 @@ import axios from 'axios';
 import './i18n';
 import i18next from 'i18next'
 
+
 const lang = localStorage.getItem('lang') || 'en';
 axios.defaults.headers.common['Accept-Language'] = lang;
 const root = ReactDOM.createRoot(document.getElementById('root'));
