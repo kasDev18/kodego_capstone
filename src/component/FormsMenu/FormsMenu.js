@@ -21,6 +21,16 @@ const FormsMenu = () => {
     }, 2000);
   })
 
+  const RedirectQMRPaper = () => {
+    window.location.href = "/qmr/paper"
+  }
+  const RedirectQMRInk = () => {
+    window.location.href = "/qmr/non_paper"
+  }
+  const RedirectCAR = () => {
+    window.location.href = "/car"
+  }
+
 
   return (
     (
@@ -35,13 +45,13 @@ const FormsMenu = () => {
               <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
             </div>
             <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={RedirectQMRPaper}>QMR(Paper)</h6>
             </div>
             <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={RedirectQMRInk}>QMR(Non-Paper)</h6>
             </div>
             <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+              < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={RedirectCAR}>CAR</h6>
             </div>
           </div>
         </div>

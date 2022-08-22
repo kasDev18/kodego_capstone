@@ -70,6 +70,15 @@ class QMRNonPaper extends Component {
     alert('You have submitted a report')
   }
 
+  RedirectQMRPaper() {
+    window.location.href = "/qmr/paper"
+  }
+
+  RedirectCAR() {
+    window.location.href = "/car"
+  }
+
+
   render() {
     return (
       <>
@@ -112,13 +121,13 @@ class QMRNonPaper extends Component {
                   <h5 className="text-uppercase fw-bolder text-decoration-underline">Forms/Records</h5>
                 </div>
                 <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Paper)</h6>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={() => this.RedirectQMRPaper()}>QMR(Paper)</h6>
                 </div>
                 <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
                   < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>QMR(Non-Paper)</h6>
                 </div>
                 <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>CAR</h6>
+                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={() => this.RedirectCAR()}>CAR</h6>
                 </div>
               </div>
             </div>
