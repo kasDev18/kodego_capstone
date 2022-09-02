@@ -41,10 +41,19 @@
     opacity: .7;
 }
 
-.Signup_cont_buttons button:nth-child(1) {
-    background: #ff5800;
-}
-
 .Signup_cont_buttons button:hover {
     opacity: 1;
+}
+
+.password_visibility span {
+    position: absolute;
+    transform: translateY(-30px);
+}
+
+.password_visibility span:hover {
+    color: #006600 !important;
+}
+
+.password_input {
+    margin-bottom: 100px;
 }

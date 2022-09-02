@@ -10,8 +10,27 @@ class Signup extends Component {
     super(props);
     this.state = {
       loader: false,
+      hidden: true,
+      password: '',
+      name: '',
     };
     this.getData();
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.toggleShow = this.toggleShow.bind(this);
+  }
+
+  handlePasswordChange(e) {
+    this.setState({ password: e.target.value });
+  }
+
+  toggleShow() {
+    this.setState({ hidden: !this.state.hidden });
+  }
+
+  componentDidMount() {
+    if (this.props.password) {
+      this.setState({ password: this.props.password });
+    }
   }
 
   getData = () => {
@@ -24,8 +43,6 @@ class Signup extends Component {
     }, 1500);
   }
 
-
-
   submitData(e) {
     e.preventDefault();
     let signUpData = {
@@ -37,7 +54,7 @@ class Signup extends Component {
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(signUpData)
     }
-    fetch('http://localhost:8000/users', requestOptions)
+    fetch('http://localhost:8000/api/users', requestOptions)
     if (window.confirm(signUpData.username + " Successfully Added!")) {
       window.location.reload();
     };
@@ -70,12 +87,27 @@ class Signup extends Component {
                     </div>
                     <br></br>
                     <div>
-                      <SignupPasswordShowHide />
+                      <div className={styles.password_input}>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
+                        <input type={this.state.hidden ? 'password' : 'text'}
+                          defaultValue={this.state.password}
+                          onChange={this.handlePasswordChange} name="password" className='form-control' id="exampleFormControlInput1" required />
+                        <div className={styles.password_visibility + ' d-flex justify-content-end'}>
+                          <div className="mx-4 px-2 view_password">
+                            <i id="visibilityBtnPassword">
+                              <span className="material-symbols-outlined text-muted" onClick={this.toggleShow}>
+                                {this.state.hidden ? 'visibility' : 'visibility_off'}
+                              </span>
+                            </i>
+                          </div>
+                        </div>
+                      </div>
+                      {/* <SignupPasswordShowHide /> */}
                       {/* <SignupConfirmPasswordShowHide /> */}
                     </div>
                   </div>
                   <div className={styles.Signup_cont_buttons + ' d-flex justify-content-center mt-4'}>
-                    <button type="button" className="btn btn-secondary p-3">Secondary</button>
+                    {/* <button type="button" className="btn btn-secondary p-3">Secondary</button> */}
                     <button type="submit" className="btn btn-success p-3">Success</button>
                   </div>
                 </div>

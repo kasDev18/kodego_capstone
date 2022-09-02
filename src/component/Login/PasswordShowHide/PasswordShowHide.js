@@ -35,7 +35,7 @@ class PasswordShowHide extends Component {
         <label for="exampleFormControlInput1" class="form-label text-muted">Password</label>
         <input type={this.state.hidden ? 'password' : 'text'}
           value={this.state.password}
-          onChange={this.handlePasswordChange} class="form-control" id="exampleFormControlInput1" />
+          onChange={this.handlePasswordChange} class="form-control" name='password' id="exampleFormControlInput1" />
         <div className={styles.password_visibility + ' d-flex justify-content-end'}>
           <div class="mx-2 view_password">
             <i id="visibilityBtnPassword">
