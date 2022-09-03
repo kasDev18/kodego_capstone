@@ -14,7 +14,6 @@ class Signup extends Component {
       password: '',
       name: '',
     };
-    this.getData();
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.toggleShow = this.toggleShow.bind(this);
   }
@@ -31,6 +30,7 @@ class Signup extends Component {
     if (this.props.password) {
       this.setState({ password: this.props.password });
     }
+    this.getData();
   }
 
   getData = () => {
@@ -48,6 +48,8 @@ class Signup extends Component {
     let signUpData = {
       username: e.target.username.value,
       password: e.target.password.value,
+      position: e.target.position.value,
+      id_num: e.target.id_num.value,
     }
     const requestOptions = {
       method: 'POST',
@@ -66,7 +68,7 @@ class Signup extends Component {
         {this.state.loader ?
           <form onSubmit={this.submitData}>
             <div className={styles.Signup + '  d-flex justify-content-center bg-success'}>
-              <div className={styles.Signup_cont + ' shadow-lg p-2 mt-5 bg-light'}>
+              <div className={styles.Signup_cont + ' shadow-lg p-2 mt-3 bg-light'}>
                 <div className={styles.Signup_cont_fpc + ' d-flex align-items-center'}>
                   <img src={logo} width={"70px"} height={"70px"} />
                   <h6 className='pt-2 mx-1'>Fortune PAckaging Corporation</h6>
@@ -82,16 +84,24 @@ class Signup extends Component {
                   </div>
                   <div className={styles.Signup_cont_inputs + ' mt-3'}>
                     <div className="mb-3">
-                      <label for="exampleFormControlInput1" className="form-label">Username</label>
-                      <input type="text" className="form-control" name="username" id="exampleFormControlInput1" placeholder="K.Catindoy" required />
+                      <label className="form-label">Username</label>
+                      <input type="text" className="form-control" name="username" placeholder="K.Catindoy" required />
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label">position</label>
+                      <input type="text" className="form-control" name="position" placeholder="Supervisor" required />
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label">ID Number:</label>
+                      <input type="text" className="form-control" name="id_num" maxLength={"6"} placeholder="123456" required />
                     </div>
                     <br></br>
                     <div>
                       <div className={styles.password_input}>
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
+                        <label className="form-label">Password</label>
                         <input type={this.state.hidden ? 'password' : 'text'}
                           defaultValue={this.state.password}
-                          onChange={this.handlePasswordChange} name="password" className='form-control' id="exampleFormControlInput1" required />
+                          onChange={this.handlePasswordChange} name="password" className='form-control' required />
                         <div className={styles.password_visibility + ' d-flex justify-content-end'}>
                           <div className="mx-4 px-2 view_password">
                             <i id="visibilityBtnPassword">
@@ -106,7 +116,7 @@ class Signup extends Component {
                       {/* <SignupConfirmPasswordShowHide /> */}
                     </div>
                   </div>
-                  <div className={styles.Signup_cont_buttons + ' d-flex justify-content-center mt-4'}>
+                  <div className={styles.Signup_cont_buttons + ' d-flex justify-content-center'}>
                     {/* <button type="button" className="btn btn-secondary p-3">Secondary</button> */}
                     <button type="submit" className="btn btn-success p-3">Success</button>
                   </div>

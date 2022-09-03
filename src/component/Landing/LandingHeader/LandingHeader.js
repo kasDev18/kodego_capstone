@@ -9,12 +9,6 @@ import i18next from 'i18next'
 const LandingHeader = () => {
   const [username, setUsername] = useState(localStorage.getItem('user-logged'));
 
-  // useEffect(() => {
-  //   setUsername(() => {
-  //     localStorage.getItem('user-logged')
-  //   });
-  // })
-
   return (
     < div className={styles.LandingHeader + '  d-flex justify-content-center align-items-center'} >
       <div className={styles.LandingHeader_col_1 + ' col-7 d-flex align-items-center'}>

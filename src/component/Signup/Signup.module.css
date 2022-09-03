@@ -1,10 +1,10 @@
 .Signup {
-    height: 100vh;
+    height: 105vh;
 }
 
 .Signup_cont {
     width: 40%;
-    height: 80vh;
+    height: 93vh;
 }
 
 .Signup_cont_fpc h6 {
@@ -39,6 +39,7 @@
     border-radius: 0%;
     width: 15rem;
     opacity: .7;
+    transform: translateY(-75px);
 }
 
 .Signup_cont_buttons button:hover {
