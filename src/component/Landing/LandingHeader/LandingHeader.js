@@ -10,6 +10,11 @@ const LandingHeader = () => {
   const [username, setUsername] = useState(localStorage.getItem('user-logged'));
   let user = JSON.parse(username)
 
+  function logout() {
+    // localStorage.clear();
+    window.location.href = '/login'
+  }
+
   return (
     < div className={styles.LandingHeader + '  d-flex justify-content-center align-items-center'} >
       <div className={styles.LandingHeader_col_1 + ' col-7 d-flex align-items-center'}>
@@ -40,7 +45,7 @@ const LandingHeader = () => {
                 <h6>{user.position}</h6>
               </div>
             </div>
-            <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="https://fpc-qa-login.netlify.app/">{i18next.t('Logout')}</a></li>
+            <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" onClick={() => logout()}>{i18next.t('Logout')}</a></li>
           </ul>
         </div>
       </div>

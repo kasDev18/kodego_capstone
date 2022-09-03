@@ -26,6 +26,13 @@ class Login extends Component {
     window.location.href = '/signup'
   }
 
+  RedirectLogin = () => {
+    localStorage.clear();
+  }
+  componentDidMount = () => {
+    this.RedirectLogin();
+  }
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -62,6 +69,7 @@ class Login extends Component {
           }
         }
       })
+
 
     // axios.post('http://localhost:8000/api/login', credentials)
     //   .then(res => {
