@@ -31,15 +31,15 @@ class PasswordShowHide extends Component {
 
   render() {
     return (
-      <div class="mb-5">
-        <label for="exampleFormControlInput1" class="form-label text-muted">Password</label>
+      <div className="mb-5">
+        <label className="form-label text-muted">Password</label>
         <input type={this.state.hidden ? 'password' : 'text'}
           value={this.state.password}
-          onChange={this.handlePasswordChange} class="form-control" name='password' id="exampleFormControlInput1" />
+          onChange={this.handlePasswordChange} className="form-control" name='password' />
         <div className={styles.password_visibility + ' d-flex justify-content-end'}>
-          <div class="mx-2 view_password">
+          <div className="mx-2 view_password">
             <i id="visibilityBtnPassword">
-              <span class="material-symbols-outlined text-muted" onClick={this.toggleShow}>
+              <span className="material-symbols-outlined text-muted" onClick={this.toggleShow}>
                 {this.state.hidden ? 'visibility' : 'visibility_off'}
               </span>
             </i>

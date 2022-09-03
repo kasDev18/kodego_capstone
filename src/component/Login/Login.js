@@ -18,7 +18,7 @@ class Login extends Component {
 
   RedirectLanding = () => {
     // window.location = 'https://fpc-qa.netlify.app/product-monitoring-system';
-    localStorage.setItem('user-logged', true)
+    // localStorage.setItem('user-logged', true)
     window.location = '/product-monitoring-system';
   }
 
@@ -30,9 +30,15 @@ class Login extends Component {
     e.preventDefault();
 
 
-    const credentials = {
+    let credentials = {
       username: e.target.username.value,
-      password: e.target.password.value
+      password: e.target.password.value,
+      position: e.target.position.value,
+    }
+
+    let credentialsCopy = {
+      username: e.target.username.value,
+      position: e.target.position.value,
     }
     const requestOptions = {
       method: 'POST',
@@ -46,11 +52,13 @@ class Login extends Component {
           console.log("Invalid Credentials!")
         }
         if (response.status == 200) {
-          localStorage.setItem('user-logged', credentials.username);
-          if (credentials.username === 'admin') {
+          localStorage.setItem('user-logged', JSON.stringify({ "username": e.target.username.value, "position": e.target.position.value }));
+          if (credentials.position === 'Admin' && credentials.username === 'admin') {
             this.navigateSignup();
-          } else {
+          } else if (credentials.position === 'QA Analyst') {
             window.location.href = '/product-monitoring-system'
+          } else {
+            this.RedirectLanding();
           }
         }
       })
@@ -73,7 +81,7 @@ class Login extends Component {
             <div className="d-flex">
               <div className={styles.Login_first_col + ' col-7 p-3'}>
                 <div className={styles + ' d-flex justify-content-center'}>
-                  <img src={logo} class="img-fluid" alt="..." width={"300px"} height={"300px"} />
+                  <img src={logo} className="img-fluid" alt="..." width={"300px"} height={"300px"} />
                 </div>
                 <div className={styles + ' d-flex justify-content-center mb-3'}>
                   <h3 className={styles.Login_company_name}>Fortune Packaging Corporation</h3>
@@ -89,20 +97,33 @@ class Login extends Component {
               </div>
               <div className={styles + ' col p-5'}>
                 <div className={styles.Login_card + ' card shadow border border-0'}>
-                  <div class="card-body">
-                    <h5 class="card-title">Login Form</h5>
+                  <div className="card-body">
+                    <h5 className="card-title">Login Form</h5>
                     <div className={styles.Login_form}>
-                      <div class="mb-3">
-                        <label class="form-label text-muted">Username</label>
-                        <input type="text" class="form-control" name='username' placeholder="name@example.com" />
+                      <div className="mb-3">
+                        <label className="form-label text-muted">Username</label>
+                        <input type="text" className="form-control" name='username' placeholder="name@example.com" />
+                      </div>
+                      <div className="mb-3">
+                        <label className="form-label text-muted">position</label>
+                        <select className="form-control form-select" name="position" placeholder="Supervisor" required>
+                          <option defaultValue className='d-none'></option>
+                          <option defaultValue="Admin">Admin</option>
+                          <option defaultValue="Supervisor">Supervisor</option>
+                          <option defaultValue="Assistant Supervisor">Assistant Supervisor</option>
+                          <option defaultValue="Calibration Officer">Calibration Officer</option>
+                          <option defaultValue="QA Analyst">QA Analyst</option>
+                          <option defaultValue="TS Engineer">TS Engineer</option>
+                          <option defaultValue="QA Inspector">QA Inspector</option>
+                        </select>
                       </div>
                       <PasswordShowHide />
                     </div>
                     <div className={styles.Login_submit_btn}>
-                      <button type="submit" class="btn btn-outline-success col-12">Submit</button>
+                      <button type="submit" className="btn btn-outline-success col-12">Submit</button>
                     </div>
                     <div className={styles.Login_forgot_password + ' d-flex justify-content-center mt-2'}>
-                      <h6>Forgot Password? click <a href="#" onClick={this.RedirectSignup} class="card-link">HERE</a></h6>
+                      <h6>Forgot Password? click <a href="#" onClick={this.RedirectSignup} className="card-link">HERE</a></h6>
                     </div>
                   </div>
                 </div>

@@ -8,6 +8,7 @@ import i18next from 'i18next'
 
 const LandingHeader = () => {
   const [username, setUsername] = useState(localStorage.getItem('user-logged'));
+  let user = JSON.parse(username)
 
   return (
     < div className={styles.LandingHeader + '  d-flex justify-content-center align-items-center'} >
@@ -24,7 +25,7 @@ const LandingHeader = () => {
         <div className={styles.LandingHeader_settings + ' dropdown'}>
           <i className="fa-solid fa-user text-light"></i>
           <a className={styles.LandingHeader_settings_dropdown + ' btn btn-transparent border border-0 dropdown-toggle'} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            {username}
+            {user.username}
           </a>
 
           <ul className="dropdown-menu shadow" aria-labelledby="dropdownMenuLink">
@@ -33,10 +34,10 @@ const LandingHeader = () => {
             </div>
             <div className={styles.LandingHeader_prof_details + ' text-light'}>
               <div className={styles + ' d-flex justify-content-center'}>
-                <h6>{i18next.t('ID: #123456')}</h6>
+                <h6>{user.username}</h6>
               </div>
               <div className={styles + ' d-flex justify-content-center'}>
-                <h6>{username}</h6>
+                <h6>{user.position}</h6>
               </div>
             </div>
             <li className={styles + ' px-5'}><a className="dropdown-item text-warning text-center border border-warning" href="https://fpc-qa-login.netlify.app/">{i18next.t('Logout')}</a></li>
