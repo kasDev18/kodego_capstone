@@ -42,10 +42,12 @@ class App extends Component {
     PreventRedirectSignup() {
         let username = localStorage.getItem('user-logged')
         let grabUsername = JSON.parse(username)
-        if (username) {
-            if (grabUsername.username !== 'Admin' && window.location.pathname === '/signup') {
+        if (username && grabUsername.username !== 'Admin') {
+            if (grabUsername.username !== 'admin' && window.location.pathname === '/signup') {
                 window.location.href = '/product-monitoring-system';
             }
+        } else if (username && grabUsername.username === 'admin') {
+            window.location.href = '/signup'
         }
     }
 
