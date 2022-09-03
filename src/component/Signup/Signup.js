@@ -56,7 +56,7 @@ class Signup extends Component {
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(signUpData)
     }
-    fetch('http://localhost:8000/api/users', requestOptions)
+    fetch('http://localhost:8000/users', requestOptions)
     if (window.confirm(signUpData.username + " Successfully Added!")) {
       window.location.reload();
     };

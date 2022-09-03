@@ -45,7 +45,7 @@ class Login extends Component {
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(credentials)
     }
-    fetch('http://localhost:8000/api/login', requestOptions)
+    fetch('http://localhost:8000/login', requestOptions)
       .then(result => result)
       .then(response => {
         if (response.status !== 200) {
