@@ -11,7 +11,6 @@ const LandingHeader = () => {
   let user = JSON.parse(username)
 
   function logout() {
-    // localStorage.clear();
     window.location.href = '/login'
   }
 

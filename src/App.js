@@ -33,8 +33,28 @@ class App extends Component {
         }
     }
 
+    AuthenticateLogged() {
+        if (window.location.pathname !== '/login' && !localStorage.getItem('user-logged')) {
+            window.location.href = '/login';
+        }
+    }
+
+    PreventRedirectSignup() {
+        let username = localStorage.getItem('user-logged')
+        let grabUsername = JSON.parse(username)
+        if (username) {
+            if (grabUsername.username !== 'Admin' && window.location.pathname === '/signup') {
+                window.location.href = '/product-monitoring-system';
+            }
+        }
+    }
+
+
+
     componentDidMount() {
         this.RedirectLogin();
+        this.AuthenticateLogged();
+        this.PreventRedirectSignup();
         // this.PreventRedirect();
 
     }
