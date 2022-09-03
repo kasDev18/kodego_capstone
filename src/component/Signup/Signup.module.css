@@ -23,10 +23,19 @@
     border-radius: 0% !important;
 }
 
+.Signup_cont_inputs select {
+    border-radius: 0% !important;
+}
+
 .Signup_cont_inputs input:focus {
     border: 1px solid rgb(168, 167, 167);
-    background: #d8d8d8;
+    background: white !important;
     box-shadow: none;
+}
+
+.Signup_cont_inputs select:focus {
+    box-shadow: none;
+    border: 1px solid rgb(168, 167, 167);
 }
 
 .Signup_cont_inputs label {

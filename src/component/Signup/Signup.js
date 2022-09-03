@@ -89,8 +89,26 @@ class Signup extends Component {
                     </div>
                     <div className="mb-3">
                       <label className="form-label">position</label>
-                      <input type="text" className="form-control" name="position" placeholder="Supervisor" required />
+                      <select className="form-control form-select" name="position" placeholder="Supervisor" required>
+                        <option selected className='d-none'></option>
+                        <option defaultValue="Supervisor">Supervisor</option>
+                        <option defaultValue="Assistant Supervisor">Assistant Supervisor</option>
+                        <option defaultValue="Calibration Officer">Calibration Officer</option>
+                        <option defaultValue="QA Analyst">QA Analyst</option>
+                        <option defaultValue="TS Engineer">TS Engineer</option>
+                        <option defaultValue="QA Inspector">QA Inspector</option>
+                      </select>
+                      {/* <input type="text" className="form-control" name="position" placeholder="Supervisor" required /> */}
                     </div>
+                    {/* <div className='col d-flex justify-content-end text-light mb-2'>
+                      <div className={styles + ' form-check mx-3'}>
+                        <select className="form-select form-select-sm" aria-label="Default select example" name='proper_arrangement'>
+                          <option selected className='d-none'>{this.state.data.proper_arrangement}</option>
+                          <option defaultValue="Accept">Accept</option>
+                          <option defaultValue="Reject">Reject</option>
+                        </select>
+                      </div>
+                    </div> */}
                     <div className="mb-3">
                       <label className="form-label">ID Number:</label>
                       <input type="text" className="form-control" name="id_num" maxLength={"6"} placeholder="123456" required />
