@@ -17,16 +17,6 @@ class App extends Component {
         }
     }
 
-    // PreventRedirect() {
-    //     localStorage.setItem('user-logged', false)
-    // }
-
-    // GetPreventRedirect() {
-    //     if (localStorage.getItem('user-logged', false)) {
-    //         <Navigate to="/login" />
-    //     }
-    // }
-
     RedirectLogin() {
         if (window.location.pathname === '/') {
             window.location.href = '/login'
