@@ -9,7 +9,6 @@
 }
 
 .Login_company_name {
-    /* font-weight: bolder; */
     font-family: 'Times New Roman', Times, serif;
     margin-top: -30px;
 }
@@ -20,7 +19,7 @@
 }
 
 .Login_card {
-    width: 18rem;
+    width: 22rem;
 }
 
 .Login_card h5 {
@@ -32,6 +31,10 @@
     font-weight: bold;
 }
 
+.Login_form {
+    transform: translateY(10px);
+}
+
 .Login_form,
 .Login_forgot_password h6 {
     text-transform: uppercase;
@@ -39,11 +42,18 @@
 
 }
 
-.Login_form input:focus {
+.Login_form input:focus,
+.Login_form select:focus {
     border: 1px solid #000000;
     box-shadow: none;
 }
 
 .Login_submit_btn button:hover {
     background: #006600;
+}
+
+.reactNotif {
+    transform: translate(-510px, -65px) !important;
+    /* width: 10vh; */
+    /* position: absolute !important; */
 }
