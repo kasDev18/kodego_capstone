@@ -145,9 +145,6 @@ class Login extends Component {
                       <div className={styles.Login_submit_btn}>
                         <button type="submit" className="btn btn-outline-success col-12">Submit</button>
                       </div>
-                      <div className={styles.Login_forgot_password + ' d-flex justify-content-center mt-2'}>
-                        <h6>Forgot Password? click <a href="#" onClick={this.RedirectSignup} className="card-link">HERE</a></h6>
-                      </div>
                     </div>
                   </div>
                 </div>

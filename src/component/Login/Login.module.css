@@ -52,6 +52,10 @@
     background: #006600;
 }
 
+.Login_submit_btn button:focus {
+    box-shadow: none;
+}
+
 .reactNotif {
     transform: translate(-510px, -65px) !important;
     /* width: 10vh; */
