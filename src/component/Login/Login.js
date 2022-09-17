@@ -1,17 +1,16 @@
-import React, { Component, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import styles from './Login.module.css';
 import logo from './images/1525506679828.jpg'
 import PasswordShowHide from './PasswordShowHide/PasswordShowHide';
-import axios from 'axios';
-import { ReactNotifications, Store } from 'react-notifications-component';
-import 'react-notifications-component/dist/theme.css'
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      wrong_credentials: false,
     }
   }
 
@@ -20,8 +19,6 @@ class Login extends Component {
   }
 
   RedirectLanding = () => {
-    // window.location = 'https://fpc-qa.netlify.app/product-monitoring-system';
-    // localStorage.setItem('user-logged', true)
     window.location = '/product-monitoring-system';
   }
 
@@ -36,16 +33,24 @@ class Login extends Component {
     this.RedirectLogin();
   }
 
+  errorNotif() {
+    const customId = "custom-id-yes";
+    const notify = () => toast.error("Invalid Credentials!", {
+      position: toast.POSITION.TOP_CENTER,
+      toastId: customId,
+      hideProgressBar: true,
+      autoClose: 1500,
+      theme: "colored",
+    });
+
+    return notify;
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     let credentials = {
       username: e.target.username.value,
       password: e.target.password.value,
-      position: e.target.position.value,
-    }
-
-    let credentialsCopy = {
-      username: e.target.username.value,
       position: e.target.position.value,
     }
     const requestOptions = {
@@ -57,19 +62,7 @@ class Login extends Component {
       .then(result => result)
       .then(response => {
         if (response.status !== 200) {
-          Store.addNotification({
-            title: "Invalid Credentials!",
-            // message: 'invalid input verified!',
-            type: "danger",
-            insert: "top",
-            container: "top-center",
-            animationIn: ["animate__animated", "animate__fadeIn"],
-            animationOut: ["animate__animated", "animate__fadeOut"],
-            dismiss: {
-              duration: 5000,
-            }
-          });
-          console.log("Invalid Credentials!")
+          this.setState({ wrong_credentials: true })
         }
         if (response.status == 200) {
           localStorage.setItem('user-logged', JSON.stringify({ "username": e.target.username.value, "position": e.target.position.value }));
@@ -83,20 +76,14 @@ class Login extends Component {
         }
       })
 
-
-    // axios.post('http://localhost:8000/api/login', credentials)
-    //   .then(res => {
-    //     console.log(res)
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
-
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        {
+          this.state.wrong_credentials ? <ToastContainer limit={1} transition={Flip} className={styles.toast} /> : ''
+        }
         <div className="app-container">
           <div className={styles.Login_body}>
             <div className={styles.Login_cont + ' d-flex align-items-center justify-content-center'}>
@@ -121,7 +108,6 @@ class Login extends Component {
                   <div className={styles.Login_card + ' card shadow border border-0'}>
                     <div className="card-body">
                       <h5 className="card-title mb-5">Login Form</h5>
-                      <ReactNotifications className={styles.reactNotif} />
                       <div className={styles.Login_form + ' mt-5'}>
                         <div className="mb-3 mt-5">
                           <label className="form-label text-muted">Username</label>
@@ -143,7 +129,7 @@ class Login extends Component {
                         <PasswordShowHide />
                       </div>
                       <div className={styles.Login_submit_btn}>
-                        <button type="submit" className="btn btn-outline-success col-12">Submit</button>
+                        <button type="submit" className="btn btn-outline-success col-12" onClick={this.errorNotif()}>Submit</button>
                       </div>
                     </div>
                   </div>

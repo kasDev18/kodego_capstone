@@ -6,6 +6,9 @@ import QMRPaperCriteria from './QMRPaperCriteria/QMRPaperCriteria';
 import LandingHeader from '../../Landing/LandingHeader/LandingHeader';
 import Position from '../../Position/Position';
 import Loader from '../../../Loader/Loader';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 class QMR extends Component {
   constructor(props) {
@@ -65,10 +68,13 @@ class QMR extends Component {
       body: JSON.stringify(qmrPaperData)
     }
     fetch('http://localhost:8000/qmr_paper', requestOptions)
-  }
-
-  onSubmit() {
-    alert('You have submitted a report')
+    const customId = "custom-id-yes";
+    toast.success(' Successfully Added!', {
+      position: toast.POSITION.TOP_CENTER,
+      toastId: customId,
+      hideProgressBar: true,
+      autoClose: 2000,
+    });
   }
 
   RedirectQMRNonPaper() {
@@ -85,6 +91,7 @@ class QMR extends Component {
         {
           !this.state.hidden ? <div className={styles.Landing}>
             <LandingHeader />
+            <ToastContainer limit={1} transition={Flip} className={styles.toast} />
             <div className={styles.content + ' d-flex p-3 px-5'}>
               <Position />
               <div className={styles.FormsContent + '  col-8 container p-2'}>
@@ -105,10 +112,10 @@ class QMR extends Component {
                     </div>
                     <div className='d-flex justify-content-end p-3 mx-2'>
                       <div className='mx-1'>
-                        <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
+                        <button type="submit" className={styles.btn_submit + ' btn btn-success'}>Submit</button>
                       </div>
                       <div className='mx-1'>
-                        <button type="button" className="btn btn-primary">Print</button>
+                        <button type="button" className={styles.btn_print + ' btn btn-primary'}>Print</button>
                       </div>
                     </div>
                   </div>

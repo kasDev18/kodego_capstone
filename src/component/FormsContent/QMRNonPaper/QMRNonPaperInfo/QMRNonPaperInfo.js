@@ -27,19 +27,19 @@ class QMRNonPaperInfo extends Component {
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">name</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' required />
             </div>
           </div>
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" htmlFor="inputGroupSelect01">Ink Color</label>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='ink_color' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='ink_color' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Date</span>
-              <input type="date" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='date' />
+              <input type="date" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='date' required />
             </div>
           </div>
         </div>
@@ -47,19 +47,19 @@ class QMRNonPaperInfo extends Component {
           <div className="col-3">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" htmlFor="inputGroupSelect01">Type</label>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value='Ink' name='prod_type' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value='Ink' name='prod_type' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Prod.Name:</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='prod_name' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='prod_name' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Supplier</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supplier' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='supplier' required />
             </div>
           </div>
         </div>
@@ -67,19 +67,19 @@ class QMRNonPaperInfo extends Component {
           <div className="col-3">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Quantity</span>
-              <input type="number" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='qty' />
+              <input type="number" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='qty' required />
             </div>
           </div>
           <div className="col">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Doc. Number:</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='doc_number' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='doc_number' required />
             </div>
           </div>
           <div className="col-5">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className="input-group-text" id="inputGroup-sizing-sm">Dept. Head</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='dept_head' />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='dept_head' required />
             </div>
           </div>
         </div>

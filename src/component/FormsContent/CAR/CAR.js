@@ -8,6 +8,8 @@ import CARWorkflowPlan from './CARWorkflowPlan/CARWorkflowPlan';
 import CARAuthorization from './CARAuthorization/CARAuthorization';
 import LandingHeader from '../../Landing/LandingHeader/LandingHeader';
 import Position from '../../Position/Position';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class CAR extends Component {
   constructor(props) {
@@ -60,15 +62,14 @@ class CAR extends Component {
     }
 
     fetch('http://localhost:8000/car', requestOptions)
-    // .then(result => result.json())
-    // .then(response => {
-    //   this.setState({ response: this.state.response })
-    // })
+    const customId = "custom-id-yes";
+    toast.success(' Successfully Added!', {
+      position: toast.POSITION.TOP_CENTER,
+      toastId: customId,
+      hideProgressBar: true,
+      autoClose: 2000,
+    });
 
-  }
-
-  onSubmit() {
-    alert('You have submitted a report')
   }
 
   RedirectQMRNonPaper() {
@@ -85,6 +86,7 @@ class CAR extends Component {
         {
           !this.state.hidden ? <div className={styles.Landing}>
             <LandingHeader />
+            <ToastContainer limit={1} transition={Flip} className={styles.toast} />
             <div className={styles.content + ' d-flex p-3 px-5'}>
               <Position />
               <div className={styles.FormsContent + '  col-8 container p-2'}>
@@ -111,10 +113,10 @@ class CAR extends Component {
                     <hr className='mx-2'></hr>
                     <div className='d-flex justify-content-end p-3 mx-2'>
                       <div className='mx-1'>
-                        <button type="submit" onClick={this.onSubmit} className="btn btn-success">Submit</button>
+                        <button type="submit" className={styles.btn_submit + ' btn btn-success'}>Submit</button>
                       </div>
                       <div className='mx-1'>
-                        <button type="button" className="btn btn-primary">Print</button>
+                        <button type="button" className={styles.btn_print + ' btn btn-primary'}>Print</button>
                       </div>
                     </div>
                   </div >

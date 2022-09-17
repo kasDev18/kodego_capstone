@@ -33,3 +33,15 @@
     height: 86vh;
     background: #d8d8d8;
 }
+
+.toast {
+    width: 600px !important;
+}
+
+.btn_submit:focus {
+    box-shadow: none !important;
+}
+
+.btn_print:focus {
+    box-shadow: none !important;
+}

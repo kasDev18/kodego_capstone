@@ -48,7 +48,8 @@
     box-shadow: none;
 }
 
-.Login_submit_btn button:hover {
+.Login_submit_btn button:hover,
+.Login_submit_btn button:focus {
     background: #006600;
 }
 
@@ -60,4 +61,8 @@
     transform: translate(-510px, -65px) !important;
     /* width: 10vh; */
     /* position: absolute !important; */
+}
+
+.toast {
+    width: 600px !important;
 }

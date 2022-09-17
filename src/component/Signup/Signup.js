@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import styles from './Signup.module.css';
 import logo from './image/1525506679828.jpg'
-import SignupConfirmPasswordShowHide from './SignupConfirmPasswordShowHide/SignupConfirmPasswordShowHide';
-import SignupPasswordShowHide from './SignupPasswordShowHide/SignupPasswordShowHide';
 import Loader from '../../Loader/Loader';
-import { ReactNotifications, Store } from 'react-notifications-component';
-import 'react-notifications-component/dist/theme.css'
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Signup extends Component {
   constructor(props) {
@@ -45,6 +43,7 @@ class Signup extends Component {
     }, 1500);
   }
 
+
   submitData(e) {
     e.preventDefault();
     let signUpData = {
@@ -59,17 +58,13 @@ class Signup extends Component {
       body: JSON.stringify(signUpData)
     }
     fetch('http://localhost:8000/users', requestOptions)
-    Store.addNotification({
-      title: "Added New User!",
-      message: signUpData.username + ' added to the system',
-      type: "success",
-      insert: "top",
-      container: "top-right",
-      animationIn: ["animate__animated", "animate__fadeIn"],
-      animationOut: ["animate__animated", "animate__fadeOut"],
-      dismiss: {
-        duration: 5000,
-      }
+    const customId = "custom-id-yes";
+    toast.success(signUpData.username + ' Successfully Added!', {
+      position: toast.POSITION.TOP_CENTER,
+      toastId: customId,
+      hideProgressBar: true,
+      autoClose: 2000,
+      theme: "colored"
     });
   }
 
@@ -79,7 +74,7 @@ class Signup extends Component {
         {this.state.loader ?
           <form onSubmit={this.submitData}>
             <div className="app-container">
-              <ReactNotifications />
+              <ToastContainer limit={1} transition={Flip} />
               <div className={styles.Signup + '  d-flex justify-content-center bg-success'}>
                 <div className={styles.Signup_cont + ' shadow-lg p-2 mt-3 bg-light'}>
                   <div className={styles.Signup_cont_fpc + ' d-flex align-items-center'}>
@@ -134,13 +129,10 @@ class Signup extends Component {
                             </div>
                           </div>
                         </div>
-                        {/* <SignupPasswordShowHide /> */}
-                        {/* <SignupConfirmPasswordShowHide /> */}
                       </div>
                     </div>
                     <div className={styles.Signup_cont_buttons + ' d-flex justify-content-center'}>
-                      {/* <button type="button" className="btn btn-secondary p-3">Secondary</button> */}
-                      <button type="submit" onClick={this.handleClick} className="btn btn-success p-3">Success</button>
+                      <button type="submit" className="btn btn-success p-3">Success</button>
                     </div>
                   </div>
                 </div>

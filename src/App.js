@@ -47,8 +47,6 @@ class App extends Component {
         this.RedirectLogin();
         this.AuthenticateLogged();
         this.PreventRedirectSignup();
-        // this.PreventRedirect();
-
     }
 
     render() {
