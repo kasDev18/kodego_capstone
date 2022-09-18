@@ -39,7 +39,7 @@ class Login extends Component {
       position: toast.POSITION.TOP_CENTER,
       toastId: customId,
       hideProgressBar: true,
-      autoClose: 1500,
+      autoClose: 1000,
       theme: "colored",
     });
 
@@ -63,6 +63,9 @@ class Login extends Component {
       .then(response => {
         if (response.status !== 200) {
           this.setState({ wrong_credentials: true })
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000)
         }
         if (response.status == 200) {
           localStorage.setItem('user-logged', JSON.stringify({ "username": e.target.username.value, "position": e.target.position.value }));
