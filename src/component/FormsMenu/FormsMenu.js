@@ -18,7 +18,7 @@ const FormsMenu = () => {
         .then((data) => {
           setData(!data)
         })
-    }, 2000);
+    }, 1500);
   })
 
   const RedirectQMRPaper = () => {

@@ -26,7 +26,7 @@ class CAR extends Component {
         .then((data) => {
           this.setState({ hidden: false })
         })
-    }, 2000);
+    }, 1000);
   }
 
   componentDidMount() {
