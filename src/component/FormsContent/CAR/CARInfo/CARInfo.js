@@ -15,12 +15,12 @@ const CARInfo = () => (
           <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
           <select className="form-select" id="inputGroupSelect01" name='department' required>
             <option defaultValue className='d-none'>Department</option>
-            <option value="Production">Production</option>
-            <option value="WEB">WEB</option>
-            <option value="Pre-Press">Pre-Press</option>
-            <option value="TSQA">TSQA</option>
-            <option value="Logistic">Logistic</option>
-            <option value="Engineering">Engineering</option>
+            <option defaultValue="Production">Production</option>
+            <option defaultValue="WEB">WEB</option>
+            <option defaultValue="Pre-Press">Pre-Press</option>
+            <option defaultValue="TSQA">TSQA</option>
+            <option defaultValue="Logistic">Logistic</option>
+            <option defaultValue="Engineering">Engineering</option>
           </select>
         </div>
       </div>
@@ -37,8 +37,8 @@ const CARInfo = () => (
           <label className="input-group-text" htmlFor="inputGroupSelect01">Type</label>
           <select className="form-select" id="inputGroupSelect01" name='product_type' required>
             <option defaultValue className="d-none">Prod. Type</option>
-            <option value="Paper">Paper</option>
-            <option value="Non-Paper">Non-Paper</option>
+            <option defaultValue="Paper">Paper</option>
+            <option defaultValue="Non-Paper">Non-Paper</option>
           </select>
         </div>
       </div>

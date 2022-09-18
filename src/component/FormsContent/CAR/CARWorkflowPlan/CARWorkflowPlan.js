@@ -16,7 +16,7 @@ class CARWorkflowPlan extends Component {
     this.related_issues_array = this.related_issues.map((element, index) => (
       <div className={styles + ' d-flex'} key={index}>
         <div className="form-check">
-          <input className="form-check-input" type="radio" value={element.value} id="flexCheckDefault" name={element.name} required />
+          <input className="form-check-input" type="radio" defaultValue={element.value} id="flexCheckDefault" name={element.name} required />
           <label className="form-check-label" htmlFor="flexCheckDefault">
             {element.issues}
           </label>

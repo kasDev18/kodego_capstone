@@ -14,7 +14,7 @@ class CARAuthorization extends Component {
   CreateStationDetectedArray = () => {
     this.station_detected_array = this.station_detected.map((element, index) => (
       <div key={index}>
-        <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.name} id='random' value={element.value} required />
+        <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.name} id='random' defaultValue={element.value} required />
         <label className="form-check-label mx-2" htmlFor="flexRadioDefault1">
           {element.stations}
         </label>
