@@ -18,7 +18,9 @@ const LandingHeader = () => {
     < div className={styles.LandingHeader + '  d-flex justify-content-center align-items-center'} >
       <div className={styles.LandingHeader_col_1 + ' col-7 d-flex align-items-center'}>
         <div className={styles + ' mx-2'}>
-          <img src={logo} className="img-fluid border rounded-circle" alt="..." width={"40px"} height={"40px"} />
+          <a href="/product-monitoring-system">
+            <img src={logo} className="img-fluid border rounded-circle" alt="..." width={"40px"} height={"40px"} />
+          </a>
         </div>
         <div className={styles + ' text-white mx-2 pt-2'}>
           <h6>{i18next.t('fpc_qa_pms')}</h6>
