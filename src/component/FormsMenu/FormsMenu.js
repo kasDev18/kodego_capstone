@@ -55,7 +55,7 @@ const FormsMenu = () => {
                   </button>
                 </h6>
                 <div id={'collapseOne'} className={styles.Forms_collapse + " accordion-collapse collapse"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     < p onClick={RedirectInk} className={styles + '  d-flex justify-content-center border rounded border-success text-success px-2 accordion-header'} >
                       <button className=" text-success bg-transparent border-0" >
                         Ink

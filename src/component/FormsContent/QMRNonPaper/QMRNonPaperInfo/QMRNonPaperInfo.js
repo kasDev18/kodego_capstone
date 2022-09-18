@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import styles from './QMRNonPaperInfo.module.css';
 
 class QMRNonPaperInfo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: []
+    }
+  }
+
+  getUsername() {
+    let name = JSON.parse(localStorage.getItem('user-logged'));
+    this.setState({ username: name.username })
+  }
+
+  componentDidMount() {
+    this.getUsername()
+  }
+
   department = [
     { dept_name: 'Production', value: 'Production' },
     { dept_name: 'WEB', value: 'WEB' },
@@ -27,7 +43,7 @@ class QMRNonPaperInfo extends Component {
           <div className="col-4">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <span className={styles + ' input-group-text'} id="inputGroup-sizing-sm">name</span>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' required />
+              <input type="text" defaultValue={this.state.username} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name='name' required />
             </div>
           </div>
           <div className="col-4">
