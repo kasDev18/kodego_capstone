@@ -13,25 +13,55 @@
     color: antiquewhite !important;
 }
 
+.QMR_legend {
+    height: 50px;
+    border: 2mm ridge #f4ee0f;
+    background: #2e5806;
+}
+
+.QMR_legend h6 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 2px;
+    margin: 0 20px 0 0;
+}
+
+.QMR_legend_criteria label {
+    font-size: 16px;
+}
+
 .QMR_paper_criteria_title h6 {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.quality_quantity_cont {
+    border-bottom: 2px solid #fff;
+}
+
+.quality_quantity_accept:focus {
+    border: none;
+}
+
+.quality_quantity_reject:focus {
+    border: none;
 }
 
 .FormsContent {
     background: #d8d8d8;
 }
 
-.Forms_Records:hover h6 {
+.Forms_Records:nth-child(2):hover h6,
+.Forms_Records:nth-child(4):hover h6 {
     background-color: #006600;
     color: #fff !important;
     transition: .5s;
 }
 
-.Forms_Records:nth-child(3) h6 {
-    background-color: #006600;
-    color: #fff !important;
-    font-size: 15px;
+
+.Forms_collapse p {
+    background-color: #006600 !important;
 }
 
 .Forms_cont {
@@ -49,4 +79,33 @@
 
 .btn_print:focus {
     box-shadow: none !important;
+}
+
+.accordion {
+    background-color: #d8d8d8 !important;
+}
+
+.Forms_title button {
+    color: #006600 !important;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+
+.Forms_title button:hover {
+    background: #006600 !important;
+    color: white !important;
+}
+
+.Forms_title button:focus {
+    box-shadow: none;
+}
+
+.Forms_collapse p:hover {
+    background: #006600 !important;
+}
+
+.Forms_collapse p:hover button {
+    color: white !important;
+    transition: .5s;
 }

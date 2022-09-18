@@ -60,7 +60,7 @@ class App extends Component {
                     <Route path="/qmr/paper" element={
                         <QMR />
                     } />
-                    <Route path="/qmr/non_paper" element={
+                    <Route path="/qmr/non_paper/ink" element={
                         <QMRNonPaper />
                     } />
                     <Route path="/car" element={

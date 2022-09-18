@@ -16,6 +16,7 @@ class CAR extends Component {
     super(props);
     this.state = {
       hidden: true,
+      color_white: false,
     }
   }
 
@@ -72,12 +73,16 @@ class CAR extends Component {
 
   }
 
-  RedirectQMRNonPaper() {
-    window.location.href = "/qmr/non_paper"
+  RedirectInk() {
+    window.location.href = "/qmr/non_paper/ink"
   }
 
   RedirectQMRPaper() {
     window.location.href = "/qmr/paper"
+  }
+
+  ColorWhite() {
+    this.setState({ color_white: true })
   }
 
   render() {
@@ -129,8 +134,23 @@ class CAR extends Component {
                 <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
                   < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={() => this.RedirectQMRPaper()}>QMR(Paper)</h6>
                 </div>
-                <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
-                  < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'} onClick={() => this.RedirectQMRNonPaper()}>QMR(Non-Paper)</h6>
+                <div className={styles.Forms_Records + ' text-dark px-2 accordion'}>
+                  <div className={styles.accordion + ' accordion-item text-success'}>
+                    < h6 className={styles.Forms_title + '  d-flex justify-content-center text-success border rounded border-success accordion-header'} >
+                      <button className="accordion-button bg-transparent border-0 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Non-Paper
+                      </button>
+                    </h6>
+                    <div id={'collapseOne'} className={styles.Forms_collapse + " accordion-collapse collapse"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        < p onClick={() => this.RedirectInk()} className={styles + '  d-flex justify-content-center border rounded border-success text-success px-2 accordion-header'} >
+                          <button class=" text-success bg-transparent border-0" >
+                            Ink
+                          </button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className={styles.Forms_Records + ' text-dark p-2 text-decoration-none'}>
                   < h6 className={styles.Forms_title + ' pt-2 d-flex justify-content-center border rounded border-success text-success p-3'}>CAR</h6>
