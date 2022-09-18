@@ -7,7 +7,9 @@
     background: #d8d8d8;
 }
 
-.Forms_Records:hover h6 {
+.Forms_Records:nth-child(2):hover h6,
+.Forms_Records:nth-child(4):hover h6,
+.Forms_Records:nth-child(3) h6:hover {
     background-color: #006600;
     color: #fff !important;
     transition: .5s;
@@ -19,11 +21,31 @@
     background-color: #006600 !important;
 }
 
-/* 
-.Forms_list {
-    height: 60px !important;
+.accordion {
+    background-color: #d8d8d8 !important;
 }
 
-.Forms_list:hover {
-    background: #006600;
-} */
+.Forms_title button {
+    color: #006600 !important;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+
+.Forms_title button:hover {
+    background: #006600 !important;
+    color: white !important;
+}
+
+.Forms_title button:focus {
+    box-shadow: none;
+}
+
+.Forms_collapse p:hover {
+    background: #006600 !important;
+}
+
+.Forms_collapse p:hover button {
+    color: white !important;
+    transition: .5s;
+}

@@ -138,9 +138,9 @@ class QMRNonPaper extends Component {
                       </button>
                     </h6>
                     <div id={'collapseOne'} className={styles.Forms_collapse + " accordion-collapse collapse show"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         < p className={styles + '  d-flex justify-content-center border rounded border-success text-success px-2 accordion-header'} >
-                          <button class=" text-light bg-transparent border-0" >
+                          <button className=" text-light bg-transparent border-0" >
                             Ink
                           </button>
                         </p>

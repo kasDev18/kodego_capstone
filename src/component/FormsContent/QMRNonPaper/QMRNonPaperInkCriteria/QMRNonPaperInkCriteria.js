@@ -10,21 +10,21 @@ class QMRNonPaperInkCriteria extends Component {
   non_paper_quantity_quality_array = [];
 
   CreateNonPaperQuantityQualityArray = () => {
-    this.non_paper_quantity_quality_array = this.non_paper_quantity_quality.map((element) => (
+    this.non_paper_quantity_quality_array = this.non_paper_quantity_quality.map((element, index) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={index} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" required />
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} defaultValue="Accept" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" required />
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} defaultValue="Reject" required />
               <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
@@ -43,22 +43,22 @@ class QMRNonPaperInkCriteria extends Component {
   non_paper_quantity_container_array = [];
 
   CreateNonPaperQualityContainerArray = () => {
-    this.non_paper_quantity_container_array = this.non_paper_quantity_container.map((element) => (
+    this.non_paper_quantity_container_array = this.non_paper_quantity_container.map((element, index) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={index} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} defaultValue="Accept" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} defaultValue="Reject" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>
@@ -75,22 +75,22 @@ class QMRNonPaperInkCriteria extends Component {
   non_paper_handling_array = [];
 
   CreateNonPaperHandlingArray = () => {
-    this.non_paper_handling_array = this.non_paper_handling.map((element) => (
+    this.non_paper_handling_array = this.non_paper_handling.map((element, index) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={index} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} defaultValue="Accept" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} defaultValue="Reject" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>
@@ -112,22 +112,22 @@ class QMRNonPaperInkCriteria extends Component {
   non_paper_documents_array = [];
 
   CreateNonPaperDocumentArray = () => {
-    this.non_paper_documents_array = this.non_paper_documents.map((element) => (
+    this.non_paper_documents_array = this.non_paper_documents.map((element, index) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={index} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
           <div className='col d-flex justify-content-end text-light'>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} value="Accept" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_accept + ' form-check-input'} type="radio" name={element.radio_name_accept} defaultValue="Accept" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Accept
               </label>
             </div>
             <div className={styles + ' form-check mx-3'}>
-              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} value="Reject" required />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <input className={styles.quality_quantity_reject + ' form-check-input'} type="radio" name={element.radio_name_reject} defaultValue="Reject" required />
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 Reject
               </label>
             </div>

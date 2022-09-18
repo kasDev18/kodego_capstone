@@ -15,9 +15,9 @@ class QMRPaperCriteria extends Component {
   paper_quantity_quality_array = [];
 
   CreatePaperQuantityQualityArray = () => {
-    this.paper_quantity_quality_array = this.paper_quantity_quality.map((element) => (
+    this.paper_quantity_quality_array = this.paper_quantity_quality.map((element, index) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={index} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
@@ -47,9 +47,9 @@ class QMRPaperCriteria extends Component {
   paper_handling_array = [];
 
   CreatePaperHandlingArray = () => {
-    this.paper_handling_array = this.paper_handling.map((element) => (
+    this.paper_handling_array = this.paper_handling.map((element, a) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={a} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>
@@ -84,9 +84,9 @@ class QMRPaperCriteria extends Component {
   paper_documents_array = [];
 
   CreateDocumentsArray = () => {
-    this.paper_documents_array = this.paper_documents.map((element) => (
+    this.paper_documents_array = this.paper_documents.map((element, b) => (
       <>
-        <div className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
+        <div key={b} className={styles.quality_quantity_cont + ' d-flex text-light pt-4'}>
           <div className='col'>
             {element.list}
           </div>

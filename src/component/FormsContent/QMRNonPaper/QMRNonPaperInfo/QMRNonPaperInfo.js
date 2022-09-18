@@ -14,8 +14,8 @@ class QMRNonPaperInfo extends Component {
   department_array = [];
 
   CreateDepartmentArray() {
-    this.department_array = this.department.map((element) => (
-      <option value={element.value}>{element.dept_name}</option>
+    this.department_array = this.department.map((element, index) => (
+      <option key={index} defaultValue={element.value}>{element.dept_name}</option>
     ))
   }
 
@@ -47,7 +47,7 @@ class QMRNonPaperInfo extends Component {
           <div className="col-3">
             <div className={styles.QMR_input_info + ' input-group input-group-md mb-3 col'}>
               <label className="input-group-text" htmlFor="inputGroupSelect01">Type</label>
-              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value='Ink' name='prod_type' required />
+              <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" defaultValue='Ink' name='prod_type' required />
             </div>
           </div>
           <div className="col">
