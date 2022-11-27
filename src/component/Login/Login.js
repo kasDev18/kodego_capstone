@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import styles from './Login.module.css';
-import logo from './images/1525506679828.jpg'
-import PasswordShowHide from './PasswordShowHide/PasswordShowHide';
+import '../Login/Login.css';
 import { ToastContainer, toast, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Logo from './Logo';
+import LoginForm from './LoginForm';
 
 
 class Login extends Component {
@@ -29,11 +29,8 @@ class Login extends Component {
   RedirectLogin = () => {
     localStorage.clear();
   }
-  componentDidMount = () => {
-    this.RedirectLogin();
-  }
 
-  errorNotif() {
+  errorNotif = () => {
     const customId = "custom-id-yes";
     const notify = () => toast.error("Invalid Credentials!", {
       position: toast.POSITION.TOP_CENTER,
@@ -44,6 +41,10 @@ class Login extends Component {
     });
 
     return notify;
+  }
+
+  componentDidMount = () => {
+    this.RedirectLogin();
   }
 
   handleSubmit = e => {
@@ -83,65 +84,25 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        {
-          this.state.wrong_credentials ? <ToastContainer limit={1} transition={Flip} className={styles.toast} /> : ''
-        }
-        <div className="app-container">
-          <div className={styles.Login_body}>
-            <div className={styles.Login_cont + ' d-flex align-items-center justify-content-center'}>
-              <div className="d-flex">
-                <div className={styles.Login_first_col + ' col-7 p-3'}>
-                  <div className={styles + ' d-flex justify-content-center'}>
-                    <img src={logo} className="img-fluid" alt="..." width={"300px"} height={"300px"} />
-                  </div>
-                  <div className={styles + ' d-flex justify-content-center mb-3'}>
-                    <h3 className={styles.Login_company_name}>Fortune Packaging Corporation</h3>
-                  </div>
-                  <div className={styles.Login_Dept}>
-                    <div className={styles + ' d-flex justify-content-center mb-1'}>
-                      <h5 className={styles + ' d-block'}>Technical Services and Quality</h5>
-                    </div>
-                    <div className={styles + ' d-flex justify-content-center'}>
-                      <h5 className={styles + ' d-block'}>Assurance Department</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles + ' col p-5'}>
-                  <div className={styles.Login_card + ' card shadow border border-0'}>
-                    <div className="card-body">
-                      <h5 className="card-title mb-5">Login Form</h5>
-                      <div className={styles.Login_form + ' mt-5'}>
-                        <div className="mb-3 mt-5">
-                          <label className="form-label text-muted">Username</label>
-                          <input type="text" className="form-control" name='username' placeholder="name@example.com" required />
-                        </div>
-                        <div className="mb-3">
-                          <label className="form-label text-muted">position</label>
-                          <select className="form-control form-select" name="position" placeholder="Supervisor" required>
-                            <option defaultValue className='d-none'></option>
-                            <option defaultValue="Admin">Admin</option>
-                            <option defaultValue="Supervisor">Supervisor</option>
-                            <option defaultValue="Assistant Supervisor">Assistant Supervisor</option>
-                            <option defaultValue="Calibration Officer">Calibration Officer</option>
-                            <option defaultValue="QA Analyst">QA Analyst</option>
-                            <option defaultValue="TS Engineer">TS Engineer</option>
-                            <option defaultValue="QA Inspector">QA Inspector</option>
-                          </select>
-                        </div>
-                        <PasswordShowHide />
-                      </div>
-                      <div className={styles.Login_submit_btn}>
-                        <button type="submit" className="btn btn-outline-success col-12" onClick={this.errorNotif()}>Submit</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div className="d-flex px-lg-5 justify-content-center Login_cont align-items-center ">
+        <div className='col col-7 d-flex justify-content-end flex-column pb-5'>
+          <Logo />
+        </div>
+        <div className='col-3'>
+          <form onSubmit={this.handleSubmit} className="Login_card card shadow border border-0 pt-5">
+            {
+              this.state.wrong_credentials ? <ToastContainer limit={1} transition={Flip} className="toast" /> : ''
+            }
+
+            <div className="card-body">
+              <LoginForm />
+              <div className="Login_submit_btn mb-5">
+                <button type="submit" className="btn btn-outline-success col-12" onClick={this.errorNotif()}>Submit</button>
               </div>
             </div>
-          </div >
+          </form >
         </div>
-      </form >
+      </div >
     )
   }
 }

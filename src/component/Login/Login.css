@@ -1,12 +1,15 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .Login_body {
     background: rgb(252, 251, 251);
-    font-family: 'Montserrat', sans-serif;
 }
 
 .Login_cont {
     height: 100vh;
-    width: 100%;
 }
+
 
 .Login_company_name {
     font-family: 'Times New Roman', Times, serif;
@@ -18,21 +21,12 @@
     margin-top: -10px !important;
 }
 
-.Login_card {
-    width: 22rem;
-}
 
 .Login_card h5 {
-    font-family: 'Times New Roman', Times, serif;
     font-size: 28px;
     justify-content: center;
     display: flex;
-    margin-bottom: 40px;
     font-weight: bold;
-}
-
-.Login_form {
-    transform: translateY(10px);
 }
 
 .Login_form,
@@ -47,6 +41,7 @@
     border: 1px solid #000000;
     box-shadow: none;
 }
+
 
 .Login_submit_btn button:hover,
 .Login_submit_btn button:focus {
